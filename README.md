@@ -4,6 +4,7 @@ Made in Basel
 __WORK IN PROGRESS__
 
 http://www.madeinbasel.org
+
 A [Jekyll](http://jekyllrb.com/) powered website, hosted with Github pages.
 
 ### Contribute

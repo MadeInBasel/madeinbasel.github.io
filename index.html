@@ -35,12 +35,11 @@ title: Home
 
 <article class="article sheet">
 	<h2>Who is in</h2>
-
-	<ul class="member-list clearfix">
-		{% for member in site.data.members%}
+	<ul class="partner-list clearfix">
+		{% for item in site.data.partner %}
 		<li class="list-item">
-			<a class="list-item-link" href="{{ member.link }}">
-				<img src="/img/partner/{{ member.imgSrc }}" alt="{{ member.name }}" />
+			<a class="list-item-link" href="{{ item.link }}">
+				<img src="/img/partner/{{ item.imgSrc }}" alt="{{ item.name }}" />
 			</a>
 		</li>
 		{% endfor %}

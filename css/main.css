@@ -224,20 +224,20 @@ strong {
 .badge-download .divider {
   font-weight: bold;
 }
-.member-list {
+.partner-list {
   list-style: none;
   padding: 0;
 }
-.member-list .list-item {
+.partner-list .list-item {
   display: block;
   float: left;
 }
-.member-list .list-item-link {
+.partner-list .list-item-link {
   display: block;
   padding: 4px;
   background-color: rgba(26, 26, 26, 0.05);
 }
-.member-list .list-item-link img {
+.partner-list .list-item-link img {
   max-width: 200px;
   height: auto;
 }

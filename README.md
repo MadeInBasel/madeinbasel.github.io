@@ -15,6 +15,6 @@ There are different ways of contributing:
 - For additional ideas on how to improve the website please open an issue and describe your proposal.
 - For ideas regarding the label, marketing, or similar, please contact me via email: hello@madeinbasel.org or twitter: [@madeinbasel](https://twitter.com/MadeInBasel).
 
-### Add you logo to the website
+### Add your logo to the website
 
 _This section will be updated soon_

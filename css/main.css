@@ -1,0 +1,252 @@
+.clearfix {
+  *zoom: 1;
+  display: block;
+}
+.clearfix:before,
+.clearfix:after {
+  display: table;
+  content: "";
+}
+.clearfix:after {
+  clear: both;
+}
+.nowrap {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  max-width: 100%;
+}
+.quote {
+  font-style: italic;
+}
+.quote:before {
+  content: "«";
+}
+.quote:after {
+  content: "»";
+}
+body {
+  background-color: #e6e6e6;
+  font-family: 'Open Sans', sans-serif;
+  font-size: .9em;
+  color: #404041;
+  line-height: 1.5;
+}
+@media (min-width: 450px) {
+  body {
+    font-size: 1em;
+  }
+}
+.sheet {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  margin: 0 auto;
+  max-width: 900px;
+}
+a {
+  text-decoration: none;
+  color: #2c87ad;
+  transition: 200ms;
+  -moz-transition: 200ms;
+  -webkit-transition: 200ms;
+}
+a:hover {
+  text-decoration: underline;
+}
+p {
+  margin: 0 0 15px;
+}
+p:last-child {
+  margin: 0;
+}
+p.solitary {
+  margin: 35px 0;
+}
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-weight: 600;
+}
+h2 {
+  font-family: 'Pacifico', cursive;
+}
+ul {
+  margin-bottom: 15px;
+}
+ul li {
+  margin-bottom: 5px;
+}
+button,
+input[type=submit] {
+  -webkit-appearance: none;
+  display: inline-block;
+  padding: 8px 15px;
+  border: 2px solid #3fb4ff;
+  background-color: #3fb4ff;
+  border-radius: 0;
+  color: #ffffff;
+  text-transform: uppercase;
+  transition: 200ms;
+  -moz-transition: 200ms;
+  -webkit-transition: 200ms;
+  cursor: pointer;
+  font-size: 1.2rem;
+}
+button:hover,
+input[type=submit]:hover {
+  text-decoration: none;
+  background-color: #25aaff;
+}
+button:active,
+input[type=submit]:active {
+  transform: scale(1.05, 1.05);
+  -moz-transform: scale(1.05, 1.05);
+  -o-transform: scale(1.05, 1.05);
+  -ms-transform: scale(1.05, 1.05);
+  -webkit-transform: scale(1.05, 1.05);
+}
+img {
+  display: block;
+  max-width: 100%;
+}
+strong {
+  font-weight: bold;
+}
+.centered {
+  text-align: center;
+}
+.columns {
+  *zoom: 1;
+  display: block;
+}
+.columns:before,
+.columns:after {
+  display: table;
+  content: "";
+}
+.columns:after {
+  clear: both;
+}
+.columns .column {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+@media (min-width: 700px) {
+  
+}
+.columns .column2 {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+@media (min-width: 700px) {
+  
+}
+@media (min-width: 700px) {
+  .columns .column2 {
+    float: left;
+    width: 50%;
+  }
+  .columns .column2:nth-child(odd) {
+    padding-right: 20px;
+  }
+  .columns .column2:nth-child(even) {
+    padding-left: 20px;
+  }
+}
+.columns .column3 {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+@media (min-width: 700px) {
+  
+}
+@media (min-width: 450px) {
+  .columns .column3 {
+    width: 33.33%;
+    float: left;
+  }
+  .columns .column3:nth-child(1n+1) {
+    padding-left: 0;
+    padding-right: 8px;
+  }
+  .columns .column3:nth-child(2n+2) {
+    padding-left: 4px;
+    padding-right: 4px;
+  }
+  .columns .column3:nth-child(3n+3) {
+    padding-right: 0;
+    padding-left: 8px;
+  }
+}
+.logo {
+  display: inline-block;
+  width: 300px;
+  height: 300px;
+  background: url(/img/logo/SVG/MadeInBasel-portrait.svg) no-repeat center;
+}
+#header {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+}
+#footer a {
+  color: #ffffff;
+}
+.article {
+  padding: 15px 12px;
+  margin-bottom: 25px;
+}
+@media (min-width: 450px) {
+  .article {
+    padding: 30px 12px;
+  }
+}
+.badge-select a {
+  display: block;
+  padding: 4px;
+  background-color: rgba(26, 26, 26, 0.1);
+  margin-bottom: 10px;
+  border: 3px dashed transparent;
+}
+.badge-select a.small {
+  padding: 2px 4px;
+}
+.badge-select a:hover {
+  background-color: rgba(26, 26, 26, 0.05);
+  border-color: rgba(26, 26, 26, 0.2);
+}
+.badge-download .divider {
+  font-weight: bold;
+}
+.member-list {
+  list-style: none;
+  padding: 0;
+}
+.member-list .list-item {
+  display: block;
+  float: left;
+}
+.member-list .list-item-link {
+  display: block;
+  padding: 4px;
+  background-color: rgba(26, 26, 26, 0.05);
+}
+.member-list .list-item-link img {
+  max-width: 200px;
+  height: auto;
+}
+.meetup-list .list-item-link h4 {
+  display: inline;
+}
+#footer {
+  background-color: #0099cc;
+  margin-top: 100px;
+  padding: 20px 0;
+  color: #ffffff;
+}

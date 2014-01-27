@@ -1,0 +1,69 @@
+---
+layout: default
+title: Home
+---
+
+<article class="article sheet">
+	<h2>What this is about</h2>
+	<p>Basel is the home of some amazing web-applications, developed by even more amazing people. With the <em>Made in Basel</em> badge, we want to underline this fact. By having a common label, we help sustain a creative climate which encourages entrepreneurship and innovation, and creates employment opportunities for a diverse local workforce.</p>
+	<p>If you are a Basel based entrepreneur, developer, designer, artist or otherwise involved in bringing the web forward, make a statement and grab your badge today. It's yours!</p>
+</article>
+
+<article class="article .article-badge sheet">
+	<h2>Choose your badge</h2>
+	<div class="badge-select">
+		<div class="columns">
+			<div class="column3">
+				<a class="small" href="/img/logo/PNG/MadeInBasel-logo-landscape.png" download="MadeInBasel-logo-landscape.png"><img src="/img/logo/SVG/MadeInBasel-landscape.svg" alt="Made in Basel" /></a>
+				<a class="small" href="/img/logo/PNG/MadeInBasel-logo-text.png" download="MadeInBasel-logo-text.png"><img src="/img/logo/SVG/MadeInBasel-text.svg" alt="Made in Basel" /></a>
+			</div>
+			<div class="column3">
+				<a href="/img/logo/PNG/MadeInBasel-logo-badge.png" download="MadeInBasel-logo-badge.png"><img src="/img/logo/SVG/MadeInBasel-badge.svg" alt="Made in Basel" /></a>
+			</div>
+			<div class="column3">
+				<a href="/img/logo/PNG/MadeInBasel-logo-portrait.png" download="MadeInBasel-logo-portrait.png"><img src="/img/logo/SVG/MadeInBasel-portrait.svg" alt="Made in Basel" /></a>
+			</div>
+		</div>
+	</div>
+	</div>
+	<div class="badge-download centered">
+		<p><span class="divider">-- or --</span></p>
+		<button class="button button-download">Download Logo Package</button>
+		<p><small>(eps, svg, png)</small></p>
+	</div>
+</article>
+
+<article class="article sheet">
+	<h2>Who is in</h2>
+
+	<ul class="member-list clearfix">
+		{% for member in site.data.members%}
+		<li class="list-item">
+			<a class="list-item-link" href="{{ member.link }}">
+				<img src="/img/partner/{{ member.imgSrc }}" alt="{{ member.name }}" />
+			</a>
+		</li>
+		{% endfor %}
+	</ul>
+	<div class="centered">
+		<p>Have you placed your badge already? Great, send your logo and we'll place it here. If you feel bold, you can also add your logo via Github Pull-Request.
+			<a href="https://github.com/MadeInBasel/madeinbasel.github.io">Here is the public repository.</a></p>
+		<button class="button button-download">Represent me here</button>
+		<p><small>(min. 150x150, SVG preferred)</small></p>
+	</div>
+</article>
+
+<article class="article sheet">
+	<h2>Meetups / Events</h2>
+	<p>If you're looking for an opportunity to meet some great people in person, here is a list of tech- and web-development Meetups taking place in Basel:</p>
+	<ul class="meetup-list">
+		{% for meetup in site.data.meetups%}
+		<li class="list-item">
+			<a class="list-item-link" href="{{ meetup.link }}">
+				<h4>{{ meetup.name }}</h4>:
+			</a>
+			<span class="description">{{ meetup.description}}</span>
+		</li>
+		{% endfor %}
+	</ul>
+</article>

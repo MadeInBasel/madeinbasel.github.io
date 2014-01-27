@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<title>{{ site.name }} - {{ page.title }}</title>
+
+		<meta name="description" content="Made in Basel">
+		<meta name="keywords" content="Made in Basel, badge, web, webdesign, browser, development, apps, @madeinbasel, switzerland, html5 ">
+
+		<meta name="msapplication-TileColor" content="#E6E6E6">
+		<meta name="msapplication-TileImage" content="/img/apple-touch-icon-144.png">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+
+		<link rel="apple-touch-icon" href="/img/apple-touch-icon-57.png">
+		<link rel="apple-touch-icon" sizes="72x72" href="/img/apple-touch-icon-72.png">
+		<link rel="apple-touch-icon" sizes="76x76" href="/img/apple-touch-icon-76.png">
+		<link rel="apple-touch-icon" sizes="114x114" href="/img/apple-touch-icon-114.png">
+		<link rel="apple-touch-icon" sizes="120x120" href="/img/apple-touch-icon-120.png">
+		<link rel="apple-touch-icon" sizes="144x144" href="/img/apple-touch-icon-144.png">
+		<link rel="apple-touch-icon" sizes="152x152" href="/img/apple-touch-icon-152.png">
+		<link rel="shortcut icon" href="/img/favicon.ico">
+
+		<link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800" rel="stylesheet" type="text/css">
+		<link href='http://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+
+		<link rel="stylesheet" href="/css/normalize.css">
+		<link rel="stylesheet" href="/css/main.css">
+	</head>
+	<body>
+		<header id="header" class="sheet">
+			<i class="logo" title="Made in Basel"></i>
+		</header>
+
+		<section id="main" class="sheet">
+			{{ content }}
+		</section>
+
+		<footer id="footer">
+			<div class="sheet">
+				<div class="columns">
+					<div class="column3">
+						<a href="mailto:hello@madeinbasel.ch" class="mail"><span class="icon"></span><span class="label">hello@madeinbasel.org</span></a>
+					</div>
+					<div class="column3">
+						<a href="https://twitter.com/madeinbasel" title="Twitter">@MadeInBasel</a>
+					</div>
+					<div class="column3">
+						<p class="copyright">&copy; {{ site.time | date: '%Y' }} madeinbasel.org</p>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</body>
+	<script>
+		(function(i, s, o, g, r, a, m) {
+			i['GoogleAnalyticsObject'] = r;
+			i[r] = i[r] || function() {
+				(i[r].q = i[r].q || []).push(arguments)
+			}, i[r].l = 1 * new Date();
+			a = s.createElement(o), m = s.getElementsByTagName(o)[0];
+			a.async = 1;
+			a.src = g;
+			m.parentNode.insertBefore(a, m)
+		})(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+		ga('create', 'UA-47494533-1', 'madeinbasel.org');
+		ga('send', 'pageview');
+
+	</script>
+</html>

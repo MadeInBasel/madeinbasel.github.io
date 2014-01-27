@@ -12,8 +12,8 @@ There are different ways of contributing:
 
 - Use a PR to fix bugs or to make improvements in usability.
 - For additional ideas on how to improve the website please open an issue and describe your proposal.
-- For ideas regarding the label, marketing, or similar please contact me via email: hello@madeinbasel.org / twitter: [@madeinbasel](https://twitter.com/MadeInBasel)
+- For ideas regarding the label, marketing, or similar, please contact me via email: hello@madeinbasel.org or twitter: [@madeinbasel](https://twitter.com/MadeInBasel).
 
 ### Add you logo to the website
 
-_I will update this section soon_
+_This section will be updated soon_

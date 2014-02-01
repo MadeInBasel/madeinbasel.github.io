@@ -94,6 +94,12 @@
 	-webkit-transition: @args;
 }
 
+.animation(@name, @duration: 300ms, @timing-function: ease, @delay: 0, @iteration-count: 1, @direction: normal, @fill-mode: none) {
+	-webkit-animation: @name @duration @timing-function @delay @iteration-count @direction @fill-mode;
+	-moz-animation: @name @duration @timing-function @delay @iteration-count @direction @fill-mode;
+	-ms-animation: @name @duration @timing-function @delay @iteration-count @direction @fill-mode;
+}
+
 .filter (@args) {
 	filter: @args;
 	-webkit-filter: @args;
@@ -131,6 +137,10 @@
 	&:active {
 		.transform(scale(1.05, 1.05));
 	}
+}
+
+html, body {
+	height: 100%;
 }
 
 body {
@@ -262,32 +272,85 @@ strong {
 	}
 }
 
-.logo {
-	display: inline-block;
-	width: 300px;
-	height: 300px;
-	background: url(/img/logo/SVG/MadeInBasel-portrait.svg) no-repeat center;
-}
-
 #header {
+	height: 100%;
 	position: relative;
 	z-index: 1;
 	text-align: center;
+
+	.logo-wrapper {
+		height: 35%;
+
+		.logo {
+			display: inline-block;
+			width: 300px;
+			height: 100%;
+			background: url(/img/logo.svg) no-repeat top center;
+		}
+
+		.catchphrase {
+			display: block;
+			font-size: 1.5rem;
+			font-style: italic;
+
+		}
+	}
+
+	.bg {
+		height: 65%;
+		background: url(/img/bg.svg) no-repeat center;
+		background-size: cover;
+	}
 }
 
+
 #footer {
+	position: relative;
+	.box-sizing(border-box);
+	margin-top: 100px;
+	padding: 12px 12px 20px;
+	background-color: @colorBgAlternative;
+	color: @colorFgAlternative;
+
+	&:before, &:after {
+		position: absolute;
+		content: "";
+		width: 100%;
+		bottom: 100%;
+		left: 0;
+
+		background-repeat: repeat-x;
+	}
+
+	&:before {
+		height: 40px;
+		background-image: url(/img/footer-bg-before.svg);
+		.animation(wave, 60s, ease, 0, infinite);
+	}
+
+	&:after {
+		height: 30px;
+		background-image: url(/img/footer-bg.svg);
+		.animation(wave, 60s, ease, 0, infinite, reverse);
+	}
+
+
+	h3 {
+		margin-top: 0;
+	}
+
 	a {
 		color: @colorFgAlternative;
 	}
+
+	.copyright {
+		opacity: .8;
+	}
 }
 
-.article {
+article {
 	padding: 15px 12px;
 	margin-bottom: 25px;
-
-	@media (min-width: @breakpointSmall) {
-		padding: 30px 12px;
-	}
 }
 
 .badge-select {
@@ -323,6 +386,7 @@ strong {
 		display: block;
 		float: left;
 	}
+
 	.list-item-link {
 		display: block;
 		padding: 4px;
@@ -346,9 +410,9 @@ strong {
 	}
 }
 
-#footer {
-	background-color: @colorBgAlternative;
-	margin-top: 100px;
-	padding: 20px 0;
-	color: @colorFgAlternative;
+@-webkit-keyframes wave{
+	0% { background-position: 0 bottom; }
+	25% { background-position: 1000px bottom; }
+	75% { background-position: -1000px bottom; }
+	100% { background-position: 0 bottom; }
 }

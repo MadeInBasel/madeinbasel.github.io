@@ -25,6 +25,10 @@
 .quote:after {
   content: "»";
 }
+html,
+body {
+  height: 100%;
+}
 body {
   background-color: #e6e6e6;
   font-family: 'Open Sans', sans-serif;
@@ -184,28 +188,76 @@ strong {
     padding-left: 8px;
   }
 }
-.logo {
-  display: inline-block;
-  width: 300px;
-  height: 300px;
-  background: url(/img/logo/SVG/MadeInBasel-portrait.svg) no-repeat center;
-}
 #header {
+  height: 100%;
   position: relative;
   z-index: 1;
   text-align: center;
 }
+#header .logo-wrapper {
+  height: 35%;
+}
+#header .logo-wrapper .logo {
+  display: inline-block;
+  width: 300px;
+  height: 100%;
+  background: url(/img/logo.svg) no-repeat top center;
+}
+#header .logo-wrapper .catchphrase {
+  display: block;
+  font-size: 1.5rem;
+  font-style: italic;
+}
+#header .bg {
+  height: 65%;
+  background: url(/img/bg.svg) no-repeat center;
+  background-size: cover;
+}
+#footer {
+  position: relative;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  margin-top: 100px;
+  padding: 12px 12px 20px;
+  background-color: #0099cc;
+  color: #ffffff;
+}
+#footer:before,
+#footer:after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  bottom: 100%;
+  left: 0;
+  background-repeat: repeat-x;
+}
+#footer:before {
+  height: 40px;
+  background-image: url(/img/footer-bg-before.svg);
+  -webkit-animation: wave 60s ease 0 infinite normal none;
+  -moz-animation: wave 60s ease 0 infinite normal none;
+  -ms-animation: wave 60s ease 0 infinite normal none;
+}
+#footer:after {
+  height: 30px;
+  background-image: url(/img/footer-bg.svg);
+  -webkit-animation: wave 60s ease 0 infinite reverse none;
+  -moz-animation: wave 60s ease 0 infinite reverse none;
+  -ms-animation: wave 60s ease 0 infinite reverse none;
+}
+#footer h3 {
+  margin-top: 0;
+}
 #footer a {
   color: #ffffff;
 }
-.article {
+#footer .copyright {
+  opacity: .8;
+}
+article {
   padding: 15px 12px;
   margin-bottom: 25px;
-}
-@media (min-width: 450px) {
-  .article {
-    padding: 30px 12px;
-  }
 }
 .badge-select a {
   display: block;
@@ -244,9 +296,17 @@ strong {
 .meetup-list .list-item-link h4 {
   display: inline;
 }
-#footer {
-  background-color: #0099cc;
-  margin-top: 100px;
-  padding: 20px 0;
-  color: #ffffff;
+@-webkit-keyframes wave {
+  0% {
+    background-position: 0 bottom;
+  }
+  25% {
+    background-position: 1000px bottom;
+  }
+  75% {
+    background-position: -1000px bottom;
+  }
+  100% {
+    background-position: 0 bottom;
+  }
 }

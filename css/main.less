@@ -1,3 +1,5 @@
+@import (less) "lesshat.less";
+
 @blue: #3FB4FF;
 @green: #009245;
 @red: #D41440;
@@ -98,14 +100,6 @@
 	-webkit-animation: @name @duration @timing-function @delay @iteration-count @direction @fill-mode;
 	-moz-animation: @name @duration @timing-function @delay @iteration-count @direction @fill-mode;
 	-ms-animation: @name @duration @timing-function @delay @iteration-count @direction @fill-mode;
-}
-
-.filter (@args) {
-	filter: @args;
-	-webkit-filter: @args;
-	-moz-filter: @args;
-	-o-filter: @args;
-	-ms-filter: @args;
 }
 
 .quote {
@@ -217,45 +211,6 @@ strong {
 
 .centered {
 	text-align: center;
-}
-
-.columns {
-	.clearfix;
-
-	.column3 {
-		width: 33.33%;
-		float: left;
-
-		&:nth-child(1n+1) {
-			padding-right: 4px;
-		}
-
-		&:nth-child(2n+2) {
-			padding-left: 2px;
-			padding-right: 2px;
-		}
-
-		&:nth-child(3n+3) {
-			padding-right: 0;
-			padding-left: 4px;
-		}
-
-		@media (min-width: @breakpointMedium) {
-			&:nth-child(1n+1) {
-				padding-right: 8px;
-			}
-
-			&:nth-child(2n+2) {
-				padding-left: 4px;
-				padding-right: 4px;
-			}
-
-			&:nth-child(3n+3) {
-				padding-right: 0;
-				padding-left: 8px;
-			}
-		}
-	}
 }
 
 #header {
@@ -396,9 +351,27 @@ article {
 }
 
 .badge-select {
+	.columns {
+		.display(flex);
+		.flex-direction(row);
+		.flex-wrap(wrap);
+		justify-content: space-between;
+
+		.column3 {
+			width: 32%;
+			display: flex;
+
+			&:first-child {
+				.flex-direction(column);
+				.flex-wrap(wrap);
+				justify-content: space-between;
+			}
+		}
+	}
+
 	a {
 		display: block;
-		margin-bottom: 8px;
+		width: 100%; // FF 29 nightly bug
 		background-color: hsla(0, 0%, 10%, .1);
 
 		@media (min-width: @breakpointMedium) {
@@ -407,7 +380,7 @@ article {
 			border: 3px dashed transparent;
 
 			&.small {
-				padding: 2px 4px;
+				padding: 1px 4px;
 			}
 		}
 

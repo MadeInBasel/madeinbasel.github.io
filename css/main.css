@@ -55,6 +55,7 @@ body {
 a {
   text-decoration: none;
   color: #2c87ad;
+  -o-transition: 200ms;
   transition: 200ms;
   -moz-transition: 200ms;
   -webkit-transition: 200ms;
@@ -95,6 +96,7 @@ input[type=submit] {
   border-radius: 0;
   color: #ffffff;
   text-transform: uppercase;
+  -o-transition: 200ms;
   transition: 200ms;
   -moz-transition: 200ms;
   -webkit-transition: 200ms;
@@ -123,46 +125,6 @@ strong {
 }
 .centered {
   text-align: center;
-}
-.columns {
-  *zoom: 1;
-  display: block;
-}
-.columns:before,
-.columns:after {
-  display: table;
-  content: "";
-}
-.columns:after {
-  clear: both;
-}
-.columns .column3 {
-  width: 33.33%;
-  float: left;
-}
-.columns .column3:nth-child(1n+1) {
-  padding-right: 4px;
-}
-.columns .column3:nth-child(2n+2) {
-  padding-left: 2px;
-  padding-right: 2px;
-}
-.columns .column3:nth-child(3n+3) {
-  padding-right: 0;
-  padding-left: 4px;
-}
-@media (min-width: 700px) {
-  .columns .column3:nth-child(1n+1) {
-    padding-right: 8px;
-  }
-  .columns .column3:nth-child(2n+2) {
-    padding-left: 4px;
-    padding-right: 4px;
-  }
-  .columns .column3:nth-child(3n+3) {
-    padding-right: 0;
-    padding-left: 8px;
-  }
 }
 #header {
   height: 100%;
@@ -204,9 +166,14 @@ strong {
   bottom: 5%;
   left: 50%;
   margin-left: -16px;
+  -o-transition: 200ms;
   transition: 200ms;
   -moz-transition: 200ms;
   -webkit-transition: 200ms;
+  -webkit-animation: bounce 700ms ease-in-out 3600s;
+  -moz-animation: bounce 700ms ease-in-out 3600s;
+  -o-animation: bounce 700ms ease-in-out 3600s;
+  animation: bounce 700ms ease-in-out 3600s;
   -webkit-animation: bounce 700ms ease-in-out 3600s 1 normal none;
   -moz-animation: bounce 700ms ease-in-out 3600s 1 normal none;
   -ms-animation: bounce 700ms ease-in-out 3600s 1 normal none;
@@ -219,6 +186,10 @@ strong {
   border-top-color: #ffffff;
 }
 #header .bg .bg-handle:hover {
+  -webkit-animation: bounce 700ms ease-in-out 0;
+  -moz-animation: bounce 700ms ease-in-out 0;
+  -o-animation: bounce 700ms ease-in-out 0;
+  animation: bounce 700ms ease-in-out 0;
   -webkit-animation: bounce 700ms ease-in-out 0 1 normal none;
   -moz-animation: bounce 700ms ease-in-out 0 1 normal none;
   -ms-animation: bounce 700ms ease-in-out 0 1 normal none;
@@ -243,6 +214,10 @@ strong {
 #footer:before {
   height: 40px;
   background-image: url(/img/footer-bg-before.svg);
+  -webkit-animation: wave 1200s linear 0 infinite;
+  -moz-animation: wave 1200s linear 0 infinite;
+  -o-animation: wave 1200s linear 0 infinite;
+  animation: wave 1200s linear 0 infinite;
   -webkit-animation: wave 1200s linear 0 infinite normal none;
   -moz-animation: wave 1200s linear 0 infinite normal none;
   -ms-animation: wave 1200s linear 0 infinite normal none;
@@ -250,6 +225,10 @@ strong {
 #footer:after {
   height: 30px;
   background-image: url(/img/footer-bg.svg);
+  -webkit-animation: wave 1200s linear 0 infinite reverse;
+  -moz-animation: wave 1200s linear 0 infinite reverse;
+  -o-animation: wave 1200s linear 0 infinite reverse;
+  animation: wave 1200s linear 0 infinite reverse;
   -webkit-animation: wave 1200s linear 0 infinite reverse none;
   -moz-animation: wave 1200s linear 0 infinite reverse none;
   -ms-animation: wave 1200s linear 0 infinite reverse none;
@@ -293,9 +272,44 @@ article {
 article p {
   text-align: justify;
 }
+.badge-select .columns {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-direction: normal;
+  -moz-box-direction: normal;
+  -webkit-box-orient: horizontal;
+  -moz-box-orient: horizontal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.badge-select .columns .column3 {
+  width: 32%;
+  display: flex;
+}
+.badge-select .columns .column3:first-child {
+  -webkit-box-direction: normal;
+  -moz-box-direction: normal;
+  -webkit-box-orient: vertical;
+  -moz-box-orient: vertical;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
 .badge-select a {
   display: block;
-  margin-bottom: 8px;
+  width: 100%;
   background-color: rgba(26, 26, 26, 0.1);
 }
 @media (min-width: 700px) {
@@ -305,7 +319,7 @@ article p {
     border: 3px dashed transparent;
   }
   .badge-select a.small {
-    padding: 2px 4px;
+    padding: 1px 4px;
   }
 }
 .badge-select a:hover {

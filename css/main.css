@@ -217,6 +217,7 @@ strong {
   margin-top: 0;
 }
 #footer a {
+  display: block;
   color: #ffffff;
 }
 #footer .copyright {

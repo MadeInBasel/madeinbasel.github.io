@@ -139,6 +139,10 @@
 	}
 }
 
+*, *:before, *:after {
+	.box-sizing(border-box);
+}
+
 html, body {
 	height: 100%;
 }
@@ -156,7 +160,6 @@ body {
 }
 
 .sheet {
-	.box-sizing(border-box);
 	margin: 0 auto;
 	max-width: @siteWidth;
 }
@@ -223,8 +226,6 @@ strong {
 	.clearfix;
 
 	.column {
-		.box-sizing(border-box);
-
 		@media (min-width: @breakpointMedium) {
 
 		}
@@ -305,7 +306,6 @@ strong {
 
 #footer {
 	position: relative;
-	.box-sizing(border-box);
 	margin-top: 100px;
 	padding: 12px 12px 20px;
 	background-color: @colorBgAlternative;

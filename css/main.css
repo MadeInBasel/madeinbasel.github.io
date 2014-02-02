@@ -25,6 +25,13 @@
 .quote:after {
   content: "»";
 }
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
 html,
 body {
   height: 100%;
@@ -42,9 +49,6 @@ body {
   }
 }
 .sheet {
-  box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
   margin: 0 auto;
   max-width: 900px;
 }
@@ -134,18 +138,8 @@ strong {
 .columns:after {
   clear: both;
 }
-.columns .column {
-  box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-}
 @media (min-width: 700px) {
   
-}
-.columns .column2 {
-  box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
 }
 @media (min-width: 700px) {
   
@@ -161,11 +155,6 @@ strong {
   .columns .column2:nth-child(even) {
     padding-left: 20px;
   }
-}
-.columns .column3 {
-  box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
 }
 @media (min-width: 700px) {
   
@@ -215,9 +204,6 @@ strong {
 }
 #footer {
   position: relative;
-  box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
   margin-top: 100px;
   padding: 12px 12px 20px;
   background-color: #0099cc;

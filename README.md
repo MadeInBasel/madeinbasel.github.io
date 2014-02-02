@@ -9,7 +9,7 @@ http://www.madeinbasel.org - a [Jekyll](http://jekyllrb.com/) powered website, h
 
 ### Appear
 
-Want to be represented as a basel-based web-project or web-company? Go ahead, and add your logo to the website:
+Want to be represented as a Basel based web-project or web-company? Go ahead, and add your logo to the website:
 
 - Fork this project
 - Add your logo file (png, svg) to `/img/partner/<your-logo>`

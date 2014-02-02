@@ -210,7 +210,7 @@ strong {
 }
 #header .bg {
   height: 65%;
-  background: url(/img/bg.svg) no-repeat center;
+  background: url(/img/bg.svg) no-repeat top center;
   background-size: cover;
 }
 #footer {

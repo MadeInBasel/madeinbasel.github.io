@@ -223,22 +223,37 @@ strong {
 	.clearfix;
 
 	.column3 {
-			width: 33.33%;
+		width: 33.33%;
 		float: left;
 
 		&:nth-child(1n+1) {
-			padding-left: 0;
-			padding-right: 8px;
+			padding-right: 4px;
 		}
 
 		&:nth-child(2n+2) {
-			padding-left: 4px;
-			padding-right: 4px;
+			padding-left: 2px;
+			padding-right: 2px;
 		}
 
 		&:nth-child(3n+3) {
 			padding-right: 0;
-			padding-left: 8px;
+			padding-left: 4px;
+		}
+
+		@media (min-width: @breakpointMedium) {
+			&:nth-child(1n+1) {
+				padding-right: 8px;
+			}
+
+			&:nth-child(2n+2) {
+				padding-left: 4px;
+				padding-right: 4px;
+			}
+
+			&:nth-child(3n+3) {
+				padding-right: 0;
+				padding-left: 8px;
+			}
 		}
 	}
 }
@@ -266,7 +281,7 @@ strong {
 			display: block;
 			font-style: italic;
 
-			@media(min-width: @breakpointMedium) {
+			@media (min-width: @breakpointMedium) {
 				font-size: 1.5rem;
 			}
 		}
@@ -303,7 +318,6 @@ strong {
 	}
 }
 
-
 #footer {
 	position: relative;
 	margin-top: 100px;
@@ -333,7 +347,6 @@ strong {
 		.animation(wave, 1200s, linear, 0, infinite, reverse);
 	}
 
-
 	h3 {
 		margin-top: 0;
 	}
@@ -346,23 +359,56 @@ strong {
 	.copyright {
 		opacity: .8;
 	}
+
+	.social {
+		display: block;
+		float: right;
+		width: 48px;
+		height: 48px;
+		margin: 8px;
+
+		@media (min-width: @breakpointMedium) {
+			width: 64px;
+			height: 64px;
+		}
+
+		background-repeat: no-repeat;
+		background-size: contain;
+		background-color: @colorFgAlternative;
+
+		&.twitter {
+			background-image: url(/img/logo-twitter.svg);
+		}
+
+		&.github {
+			background-image: url(/img/logo-github.svg);
+		}
+	}
 }
 
 article {
 	padding: 15px 12px;
 	margin-bottom: 25px;
+
+	p {
+		text-align: justify;
+	}
 }
 
 .badge-select {
 	a {
 		display: block;
-		padding: 4px;
+		margin-bottom: 8px;
 		background-color: hsla(0, 0%, 10%, .1);
-		margin-bottom: 10px;
-		border: 3px dashed transparent;
 
-		&.small {
-			padding: 2px 4px;
+		@media (min-width: @breakpointMedium) {
+			margin-bottom: 10px;
+			padding: 4px;
+			border: 3px dashed transparent;
+
+			&.small {
+				padding: 2px 4px;
+			}
 		}
 
 		&:hover {
@@ -412,33 +458,65 @@ article {
 }
 
 // Animations
-@keyframes wave{
-	0% { background-position: 0 bottom; }
-	25% { background-position: 10000px bottom; }
-	75% { background-position: -10000px bottom; }
-	100% { background-position: 0 bottom; }
-}
-@-webkit-keyframes wave{
-	0% { background-position: 0 bottom; }
-	25% { background-position: 10000px bottom; }
-	75% { background-position: -10000px bottom; }
-	100% { background-position: 0 bottom; }
-}
-@-moz-keyframes wave{
-	0% { background-position: 0 bottom; }
-	25% { background-position: 10000px bottom; }
-	75% { background-position: -10000px bottom; }
-	100% { background-position: 0 bottom; }
+@keyframes wave {
+	0% {
+		background-position: 0 bottom;
+	}
+	25% {
+		background-position: 10000px bottom;
+	}
+	75% {
+		background-position: -10000px bottom;
+	}
+	100% {
+		background-position: 0 bottom;
+	}
 }
 
-@keyframes bounce{
-	50% { transform: translate(0, 50%); }
+@-webkit-keyframes wave {
+	0% {
+		background-position: 0 bottom;
+	}
+	25% {
+		background-position: 10000px bottom;
+	}
+	75% {
+		background-position: -10000px bottom;
+	}
+	100% {
+		background-position: 0 bottom;
+	}
 }
 
-@-webkit-keyframes bounce{
-	50% { -webkit-transform: translate(0, 50%); }
+@-moz-keyframes wave {
+	0% {
+		background-position: 0 bottom;
+	}
+	25% {
+		background-position: 10000px bottom;
+	}
+	75% {
+		background-position: -10000px bottom;
+	}
+	100% {
+		background-position: 0 bottom;
+	}
 }
 
-@-moz-keyframes bounce{
-	50% { -moz-transform: translate(0, 50%); }
+@keyframes bounce {
+	50% {
+		transform: translate(0, 50%);
+	}
+}
+
+@-webkit-keyframes bounce {
+	50% {
+		-webkit-transform: translate(0, 50%);
+	}
+}
+
+@-moz-keyframes bounce {
+	50% {
+		-moz-transform: translate(0, 50%);
+	}
 }

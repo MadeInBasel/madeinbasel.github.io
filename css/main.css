@@ -141,16 +141,28 @@ strong {
   float: left;
 }
 .columns .column3:nth-child(1n+1) {
-  padding-left: 0;
-  padding-right: 8px;
+  padding-right: 4px;
 }
 .columns .column3:nth-child(2n+2) {
-  padding-left: 4px;
-  padding-right: 4px;
+  padding-left: 2px;
+  padding-right: 2px;
 }
 .columns .column3:nth-child(3n+3) {
   padding-right: 0;
-  padding-left: 8px;
+  padding-left: 4px;
+}
+@media (min-width: 700px) {
+  .columns .column3:nth-child(1n+1) {
+    padding-right: 8px;
+  }
+  .columns .column3:nth-child(2n+2) {
+    padding-left: 4px;
+    padding-right: 4px;
+  }
+  .columns .column3:nth-child(3n+3) {
+    padding-right: 0;
+    padding-left: 8px;
+  }
 }
 #header {
   height: 100%;
@@ -252,19 +264,49 @@ strong {
 #footer .copyright {
   opacity: .8;
 }
+#footer .social {
+  display: block;
+  float: right;
+  width: 48px;
+  height: 48px;
+  margin: 8px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-color: #ffffff;
+}
+@media (min-width: 700px) {
+  #footer .social {
+    width: 64px;
+    height: 64px;
+  }
+}
+#footer .social.twitter {
+  background-image: url(/img/logo-twitter.svg);
+}
+#footer .social.github {
+  background-image: url(/img/logo-github.svg);
+}
 article {
   padding: 15px 12px;
   margin-bottom: 25px;
 }
+article p {
+  text-align: justify;
+}
 .badge-select a {
   display: block;
-  padding: 4px;
+  margin-bottom: 8px;
   background-color: rgba(26, 26, 26, 0.1);
-  margin-bottom: 10px;
-  border: 3px dashed transparent;
 }
-.badge-select a.small {
-  padding: 2px 4px;
+@media (min-width: 700px) {
+  .badge-select a {
+    margin-bottom: 10px;
+    padding: 4px;
+    border: 3px dashed transparent;
+  }
+  .badge-select a.small {
+    padding: 2px 4px;
+  }
 }
 .badge-select a:hover {
   background-color: rgba(26, 26, 26, 0.05);

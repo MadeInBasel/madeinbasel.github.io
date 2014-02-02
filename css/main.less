@@ -318,18 +318,19 @@ strong {
 		bottom: 100%;
 		left: 0;
 		background-repeat: repeat-x;
+		background-position: 0 bottom;
 	}
 
 	&:before {
 		height: 40px;
 		background-image: url(/img/footer-bg-before.svg);
-		.animation(wave, 60s, ease, 0, infinite);
+		.animation(wave, 1200s, linear, 0, infinite);
 	}
 
 	&:after {
 		height: 30px;
 		background-image: url(/img/footer-bg.svg);
-		.animation(wave, 60s, ease, 0, infinite, reverse);
+		.animation(wave, 1200s, linear, 0, infinite, reverse);
 	}
 
 
@@ -413,20 +414,20 @@ article {
 // Animations
 @keyframes wave{
 	0% { background-position: 0 bottom; }
-	25% { background-position: 1000px bottom; }
-	75% { background-position: -1000px bottom; }
+	25% { background-position: 10000px bottom; }
+	75% { background-position: -10000px bottom; }
 	100% { background-position: 0 bottom; }
 }
 @-webkit-keyframes wave{
 	0% { background-position: 0 bottom; }
-	25% { background-position: 1000px bottom; }
-	75% { background-position: -1000px bottom; }
+	25% { background-position: 10000px bottom; }
+	75% { background-position: -10000px bottom; }
 	100% { background-position: 0 bottom; }
 }
 @-moz-keyframes wave{
 	0% { background-position: 0 bottom; }
-	25% { background-position: 1000px bottom; }
-	75% { background-position: -1000px bottom; }
+	25% { background-position: 10000px bottom; }
+	75% { background-position: -10000px bottom; }
 	100% { background-position: 0 bottom; }
 }
 

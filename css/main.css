@@ -226,20 +226,21 @@ strong {
   bottom: 100%;
   left: 0;
   background-repeat: repeat-x;
+  background-position: 0 bottom;
 }
 #footer:before {
   height: 40px;
   background-image: url(/img/footer-bg-before.svg);
-  -webkit-animation: wave 60s ease 0 infinite normal none;
-  -moz-animation: wave 60s ease 0 infinite normal none;
-  -ms-animation: wave 60s ease 0 infinite normal none;
+  -webkit-animation: wave 1200s linear 0 infinite normal none;
+  -moz-animation: wave 1200s linear 0 infinite normal none;
+  -ms-animation: wave 1200s linear 0 infinite normal none;
 }
 #footer:after {
   height: 30px;
   background-image: url(/img/footer-bg.svg);
-  -webkit-animation: wave 60s ease 0 infinite reverse none;
-  -moz-animation: wave 60s ease 0 infinite reverse none;
-  -ms-animation: wave 60s ease 0 infinite reverse none;
+  -webkit-animation: wave 1200s linear 0 infinite reverse none;
+  -moz-animation: wave 1200s linear 0 infinite reverse none;
+  -ms-animation: wave 1200s linear 0 infinite reverse none;
 }
 #footer h3 {
   margin-top: 0;
@@ -300,10 +301,10 @@ article {
     background-position: 0 bottom;
   }
   25% {
-    background-position: 1000px bottom;
+    background-position: 10000px bottom;
   }
   75% {
-    background-position: -1000px bottom;
+    background-position: -10000px bottom;
   }
   100% {
     background-position: 0 bottom;
@@ -314,10 +315,10 @@ article {
     background-position: 0 bottom;
   }
   25% {
-    background-position: 1000px bottom;
+    background-position: 10000px bottom;
   }
   75% {
-    background-position: -1000px bottom;
+    background-position: -10000px bottom;
   }
   100% {
     background-position: 0 bottom;
@@ -328,10 +329,10 @@ article {
     background-position: 0 bottom;
   }
   25% {
-    background-position: 1000px bottom;
+    background-position: 10000px bottom;
   }
   75% {
-    background-position: -1000px bottom;
+    background-position: -10000px bottom;
   }
   100% {
     background-position: 0 bottom;

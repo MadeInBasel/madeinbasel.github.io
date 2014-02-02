@@ -180,10 +180,6 @@ p {
 	&:last-child {
 		margin: 0;
 	}
-
-	&.solitary {
-		margin: 35px 0;
-	}
 }
 
 h1, h2, h3, h4, h5 {
@@ -278,28 +274,33 @@ strong {
 	position: relative;
 	z-index: 1;
 	text-align: center;
+	margin-bottom: 30px; //todo: maybe a better solution
 
 	.logo-wrapper {
+		position: relative;
 		height: 35%;
+		z-index: 1;
 
 		.logo {
 			display: inline-block;
 			width: 300px;
 			height: 100%;
-			background: url(/img/logo.svg) no-repeat top center;
+			background: url(/img/logo.svg) no-repeat center;
 		}
 
 		.catchphrase {
 			display: block;
-			font-size: 1.5rem;
 			font-style: italic;
+
+			@media(min-width: @breakpointMedium) {
+				font-size: 1.5rem;
+			}
 		}
 	}
 
 	.bg {
 		height: 65%;
-		background: url(/img/bg.svg) no-repeat top center;
-		background-size: cover;
+		margin-top: 2%; //todo: think of a better solution
 	}
 }
 

@@ -288,10 +288,18 @@ article p {
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  -webkit-box-pack: space-between;
+  -moz-box-pack: justify;
+  -webkit-justify-content: justify;
+  -ms-flex-pack: space-between;
   justify-content: space-between;
 }
 .badge-select .columns .column3 {
   width: 32%;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
 }
 .badge-select .columns .column3:first-child {
@@ -305,6 +313,10 @@ article p {
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  -webkit-box-pack: space-between;
+  -moz-box-pack: justify;
+  -webkit-justify-content: justify;
+  -ms-flex-pack: space-between;
   justify-content: space-between;
 }
 .badge-select a {

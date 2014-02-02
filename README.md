@@ -19,5 +19,5 @@ Want to be represented as a Basel based web-project or web-company? Go ahead, an
 ### Contribute
 
 - Use a PR to fix bugs or to make improvements in usability.
-- For additional ideas on how to improve the website please open an issue and describe your proposal.
+- For additional ideas on how to improve the website please open an issue and describe your proposition.
 - For ideas regarding the label, marketing, or similar, please contact me via email: hello@madeinbasel.org.

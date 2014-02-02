@@ -80,6 +80,7 @@ h2 {
 }
 ul {
   margin-bottom: 15px;
+  padding-left: 25px;
 }
 ul li {
   margin-bottom: 5px;
@@ -135,44 +136,21 @@ strong {
 .columns:after {
   clear: both;
 }
-@media (min-width: 700px) {
-  
+.columns .column3 {
+  width: 33.33%;
+  float: left;
 }
-@media (min-width: 700px) {
-  
+.columns .column3:nth-child(1n+1) {
+  padding-left: 0;
+  padding-right: 8px;
 }
-@media (min-width: 700px) {
-  .columns .column2 {
-    float: left;
-    width: 50%;
-  }
-  .columns .column2:nth-child(odd) {
-    padding-right: 20px;
-  }
-  .columns .column2:nth-child(even) {
-    padding-left: 20px;
-  }
+.columns .column3:nth-child(2n+2) {
+  padding-left: 4px;
+  padding-right: 4px;
 }
-@media (min-width: 700px) {
-  
-}
-@media (min-width: 450px) {
-  .columns .column3 {
-    width: 33.33%;
-    float: left;
-  }
-  .columns .column3:nth-child(1n+1) {
-    padding-left: 0;
-    padding-right: 8px;
-  }
-  .columns .column3:nth-child(2n+2) {
-    padding-left: 4px;
-    padding-right: 4px;
-  }
-  .columns .column3:nth-child(3n+3) {
-    padding-right: 0;
-    padding-left: 8px;
-  }
+.columns .column3:nth-child(3n+3) {
+  padding-right: 0;
+  padding-left: 8px;
 }
 #header {
   height: 100%;
@@ -281,6 +259,9 @@ article {
 .partner-list .list-item-link img {
   max-width: 200px;
   height: auto;
+}
+.meetup-list .list-item {
+  margin-bottom: 15px;
 }
 .meetup-list .list-item-link h4 {
   display: inline;

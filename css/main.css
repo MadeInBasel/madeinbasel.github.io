@@ -90,8 +90,8 @@ ul li {
   -webkit-appearance: none;
   display: inline-block;
   padding: 8px 15px;
-  border: 2px solid #3fb4ff;
-  background-color: #3fb4ff;
+  border: 0;
+  background-color: #0099cc;
   border-radius: 0;
   color: #ffffff;
   text-transform: uppercase;
@@ -104,14 +104,19 @@ ul li {
 }
 .button:hover {
   text-decoration: none;
-  background-color: #25aaff;
+  background-color: #00ace6;
 }
 .button:active {
-  transform: scale(1.05, 1.05);
-  -moz-transform: scale(1.05, 1.05);
-  -o-transform: scale(1.05, 1.05);
-  -ms-transform: scale(1.05, 1.05);
-  -webkit-transform: scale(1.05, 1.05);
+  transform: scale(0.98, 0.98);
+  -moz-transform: scale(0.98, 0.98);
+  -o-transform: scale(0.98, 0.98);
+  -ms-transform: scale(0.98, 0.98);
+  -webkit-transform: scale(0.98, 0.98);
+  background-color: #0086b3;
+  -moz-box-shadow: inset 0 2px 0 2px #007aa3;
+  box-shadow: inset 0 2px 0 2px #007aa3;
+  -webkit-box-shadow: inset 0 2px 0 2px #007aa3;
+  outline: none;
 }
 img {
   display: block;

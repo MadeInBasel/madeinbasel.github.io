@@ -1,6 +1,6 @@
 @import (less) "lesshat.less";
 
-@blue: #3FB4FF;
+@blue: #0099CC;
 @green: #009245;
 @red: #D41440;
 @orange: #F1861E;
@@ -116,7 +116,7 @@
 .button(@color) {
 	display: inline-block;
 	padding: 8px 15px;
-	border: 2px solid @color;
+	border: 0;
 	background-color: @color;
 	border-radius: 0;
 	color: @colorFgAlternative;
@@ -125,11 +125,14 @@
 
 	&:hover {
 		text-decoration: none;
-		background-color: darken(@color, 5);
+		background-color: lighten(@color, 5);
 	}
 
 	&:active {
-		.transform(scale(1.05, 1.05));
+		.transform(scale(0.98, .98));
+		background-color: darken(@color, 5);
+		.box-shadow(inset 0 2px 0 2px darken(@color, 8));
+		outline: none;
 	}
 }
 

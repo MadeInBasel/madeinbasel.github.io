@@ -315,7 +315,17 @@ article {
 	}
 }
 
-.badge-select {
+.badge-link, .list-item-link {
+	display: block;
+	width: 100%; // FF bug?
+	background-color: hsla(0, 0%, 10%, .08);
+
+	&:hover {
+		background-color: hsla(0, 0%, 10%, .05);
+	}
+}
+
+.badge {
 	.columns {
 		.display(flex);
 		.flex-direction(row);
@@ -334,11 +344,7 @@ article {
 		}
 	}
 
-	a {
-		display: block;
-		width: 100%; // FF bug?
-		background-color: hsla(0, 0%, 10%, .1);
-
+	.badge-link {
 		@media (min-width: @breakpointMedium) {
 			margin-bottom: 10px;
 			padding: 4px;
@@ -350,13 +356,10 @@ article {
 		}
 
 		&:hover {
-			background-color: hsla(0, 0%, 10%, .05);
 			border-color: hsla(0, 0%, 10%, .2);
 		}
 	}
-}
 
-.badge-download {
 	.divider {
 		font-weight: bold;
 	}
@@ -372,9 +375,7 @@ article {
 	}
 
 	.list-item-link {
-		display: block;
 		padding: 4px;
-		background-color: hsla(0, 0%, 10%, .05);
 
 		img {
 			max-width: 200px;
@@ -384,14 +385,18 @@ article {
 }
 
 .meetup-list {
+	list-style: none;
+	padding: 0;
+
 	.list-item {
-		margin-bottom: 15px;
+		margin-bottom: 5px;
+		padding: 12px;
+		background-color: hsla(0, 0%, 10%, .08);
+		background-color: white;
 	}
 
-	.list-item-link {
-		h4 {
-			display: inline;
-		}
+	h4 {
+		margin: 0;
 	}
 }
 

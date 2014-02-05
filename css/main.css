@@ -277,7 +277,17 @@ article {
 article p {
   text-align: justify;
 }
-.badge-select .columns {
+.badge-link,
+.list-item-link {
+  display: block;
+  width: 100%;
+  background-color: rgba(26, 26, 26, 0.08);
+}
+.badge-link:hover,
+.list-item-link:hover {
+  background-color: rgba(26, 26, 26, 0.05);
+}
+.badge .columns {
   display: -webkit-box;
   display: -moz-box;
   display: -webkit-flex;
@@ -299,7 +309,7 @@ article p {
   -ms-flex-pack: space-between;
   justify-content: space-between;
 }
-.badge-select .columns .column3 {
+.badge .columns .column3 {
   width: 32%;
   display: -webkit-box;
   display: -moz-box;
@@ -307,7 +317,7 @@ article p {
   display: -ms-flexbox;
   display: flex;
 }
-.badge-select .columns .column3:first-child {
+.badge .columns .column3:first-child {
   -webkit-box-direction: normal;
   -moz-box-direction: normal;
   -webkit-box-orient: vertical;
@@ -324,26 +334,20 @@ article p {
   -ms-flex-pack: space-between;
   justify-content: space-between;
 }
-.badge-select a {
-  display: block;
-  width: 100%;
-  background-color: rgba(26, 26, 26, 0.1);
-}
 @media (min-width: 700px) {
-  .badge-select a {
+  .badge .badge-link {
     margin-bottom: 10px;
     padding: 4px;
     border: 3px dashed transparent;
   }
-  .badge-select a.small {
+  .badge .badge-link.small {
     padding: 1px 4px;
   }
 }
-.badge-select a:hover {
-  background-color: rgba(26, 26, 26, 0.05);
+.badge .badge-link:hover {
   border-color: rgba(26, 26, 26, 0.2);
 }
-.badge-download .divider {
+.badge .divider {
   font-weight: bold;
 }
 .partner-list {
@@ -355,19 +359,24 @@ article p {
   float: left;
 }
 .partner-list .list-item-link {
-  display: block;
   padding: 4px;
-  background-color: rgba(26, 26, 26, 0.05);
 }
 .partner-list .list-item-link img {
   max-width: 200px;
   height: auto;
 }
-.meetup-list .list-item {
-  margin-bottom: 15px;
+.meetup-list {
+  list-style: none;
+  padding: 0;
 }
-.meetup-list .list-item-link h4 {
-  display: inline;
+.meetup-list .list-item {
+  margin-bottom: 5px;
+  padding: 12px;
+  background-color: rgba(26, 26, 26, 0.08);
+  background-color: white;
+}
+.meetup-list h4 {
+  margin: 0;
 }
 lesshat-selector {
   -lh-property: 0; } 

@@ -9,24 +9,22 @@ title: Home
 	<p>If you are a Basel based entrepreneur, developer, designer, artist or otherwise involved in bringing the web forward, make a statement and grab your badge today. It's yours!</p>
 </article>
 
-<article>
+<article class="badge">
 	<h2>Choose your badge</h2>
-	<div class="badge-select">
 		<div class="columns">
 			<div class="column3">
-				<a class="small" href="/img/logo/PNG/MadeInBasel-landscape.png" download="MadeInBasel-landscape.png"><img src="/img/logo/SVG/MadeInBasel-landscape.svg" alt="Made in Basel" /></a>
-				<a class="small" href="/img/logo/PNG/MadeInBasel-textOnly.png" download="MadeInBasel-text.png"><img src="/img/logo/SVG/MadeInBasel-text.svg" alt="Made in Basel" /></a>
+				<a class="badge-link small" href="/img/logo/PNG/MadeInBasel-landscape.png" download="MadeInBasel-landscape.png"><img src="/img/logo/SVG/MadeInBasel-landscape.svg" alt="Made in Basel" /></a>
+				<a class="badge-link small" href="/img/logo/PNG/MadeInBasel-textOnly.png" download="MadeInBasel-text.png"><img src="/img/logo/SVG/MadeInBasel-text.svg" alt="Made in Basel" /></a>
 			</div>
 			<div class="column3">
-				<a href="/img/logo/PNG/MadeInBasel-badge.png" download="MadeInBasel-badge.png"><img src="/img/logo/SVG/MadeInBasel-badge.svg" alt="Made in Basel" /></a>
+				<a class="badge-link" href="/img/logo/PNG/MadeInBasel-badge.png" download="MadeInBasel-badge.png"><img src="/img/logo/SVG/MadeInBasel-badge.svg" alt="Made in Basel" /></a>
 			</div>
 			<div class="column3">
-				<a href="/img/logo/PNG/MadeInBasel-portrait.png" download="MadeInBasel-portrait.png"><img src="/img/logo/SVG/MadeInBasel-portrait.svg" alt="Made in Basel" /></a>
+				<a class="badge-link" href="/img/logo/PNG/MadeInBasel-portrait.png" download="MadeInBasel-portrait.png"><img src="/img/logo/SVG/MadeInBasel-portrait.svg" alt="Made in Basel" /></a>
 			</div>
 		</div>
 	</div>
-	</div>
-	<div class="badge-download centered">
+	<div class="centered">
 		<p class="centered"><span class="divider">-- or --</span></p>
 		<a href="/img/logo/MadeInBasel-LogoPackage.zip" download="MadeInBasel-LogoPackage.zip" class="button button-download">Download Logo Package</a>
 		<p class="centered"><small>(eps, svg, png)</small></p>
@@ -58,8 +56,8 @@ title: Home
 	<ul class="meetup-list">
 		{% for meetup in site.data.meetups%}
 		<li class="list-item">
-			<a class="list-item-link" href="{{ meetup.link }}">
-				<h4>{{ meetup.name }}</h4>:
+			<a href="{{ meetup.link }}">
+				<h4>{{ meetup.name }}</h4>
 			</a>
 			<span class="description">{{ meetup.description}}</span>
 		</li>

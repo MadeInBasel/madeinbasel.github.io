@@ -17,7 +17,6 @@
 @fontSpecial: 'Pacifico', cursive;
 
 @fontSize: 1em;
-//16px
 @fontSizeSmall: .8rem;
 @fontSizeTiny: .6rem;
 @fontSizeLarge: 1.2rem;
@@ -47,60 +46,6 @@
 	white-space: nowrap;
 	text-overflow: ellipsis;
 	max-width: 100%;
-}
-
-.gradient(@startColor: #eee, @endColor: white) {
-	background: -webkit-gradient(linear, left top, left bottom, from(@startColor), to(@endColor));
-	background: -webkit-linear-gradient(top, @startColor, @endColor);
-	background: -moz-linear-gradient(top, @startColor, @endColor);
-	background: -ms-linear-gradient(top, @startColor, @endColor);
-	background: -o-linear-gradient(top, @startColor, @endColor);
-}
-
-.horizontal-gradient(@startColor: #eee, @endColor: white) {
-	background-image: -webkit-gradient(linear, left top, right top, from(@startColor), to(@endColor));
-	background-image: -webkit-linear-gradient(left, @startColor, @endColor);
-	background-image: -moz-linear-gradient(left, @startColor, @endColor);
-	background-image: -ms-linear-gradient(left, @startColor, @endColor);
-	background-image: -o-linear-gradient(left, @startColor, @endColor);
-}
-
-.box-shadow(@args) {
-	box-shadow: @args;
-	-webkit-box-shadow: @args;
-}
-
-.box-sizing(@args) {
-	box-sizing: @args;
-	-moz-box-sizing: @args;
-	-webkit-box-sizing: @args;
-}
-
-.user-select(@args) {
-	user-select: @args;
-	-moz-user-select: @args;
-	-ms-user-select: @args;
-	-webkit-user-select: @args;
-}
-
-.transform(@args) {
-	transform: @args;
-	-moz-transform: @args;
-	-o-transform: @args;
-	-ms-transform: @args;
-	-webkit-transform: @args;
-}
-
-.transition(@args) {
-	transition: @args;
-	-moz-transition: @args;
-	-webkit-transition: @args;
-}
-
-.animation(@name, @duration: 300ms, @timing-function: ease, @delay: 0, @iteration-count: 1, @direction: normal, @fill-mode: none) {
-	-webkit-animation: @name @duration @timing-function @delay @iteration-count @direction @fill-mode;
-	-moz-animation: @name @duration @timing-function @delay @iteration-count @direction @fill-mode;
-	-ms-animation: @name @duration @timing-function @delay @iteration-count @direction @fill-mode;
 }
 
 .quote {

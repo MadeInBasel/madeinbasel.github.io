@@ -28,9 +28,9 @@
 *,
 *:before,
 *:after {
-  box-sizing: border-box;
-  -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
 html,
 body {
@@ -66,10 +66,10 @@ body {
 a {
   text-decoration: none;
   color: #2c87ad;
+  -webkit-transition: 200ms;
+  -moz-transition: 200ms;
   -o-transition: 200ms;
   transition: 200ms;
-  -moz-transition: 200ms;
-  -webkit-transition: 200ms;
 }
 a:hover {
   text-decoration: underline;
@@ -100,10 +100,10 @@ ul li {
   border-radius: 0;
   color: #ffffff;
   text-transform: uppercase;
+  -webkit-transition: 200ms;
+  -moz-transition: 200ms;
   -o-transition: 200ms;
   transition: 200ms;
-  -moz-transition: 200ms;
-  -webkit-transition: 200ms;
   cursor: pointer;
   font-size: 1.2rem;
 }
@@ -112,15 +112,15 @@ ul li {
   background-color: #00ace6;
 }
 .button:active {
-  transform: scale(0.98, 0.98);
+  -webkit-transform: scale(0.98, 0.98);
   -moz-transform: scale(0.98, 0.98);
   -o-transform: scale(0.98, 0.98);
   -ms-transform: scale(0.98, 0.98);
-  -webkit-transform: scale(0.98, 0.98);
+  transform: scale(0.98, 0.98);
   background-color: #0086b3;
+  -webkit-box-shadow: inset 0 2px 0 2px #007aa3;
   -moz-box-shadow: inset 0 2px 0 2px #007aa3;
   box-shadow: inset 0 2px 0 2px #007aa3;
-  -webkit-box-shadow: inset 0 2px 0 2px #007aa3;
   outline: none;
 }
 img {
@@ -173,17 +173,14 @@ strong {
   bottom: 5%;
   left: 50%;
   margin-left: -16px;
+  -webkit-transition: 200ms;
+  -moz-transition: 200ms;
   -o-transition: 200ms;
   transition: 200ms;
-  -moz-transition: 200ms;
-  -webkit-transition: 200ms;
   -webkit-animation: bounce 700ms ease-in-out 3600s;
   -moz-animation: bounce 700ms ease-in-out 3600s;
   -o-animation: bounce 700ms ease-in-out 3600s;
   animation: bounce 700ms ease-in-out 3600s;
-  -webkit-animation: bounce 700ms ease-in-out 3600s 1 normal none;
-  -moz-animation: bounce 700ms ease-in-out 3600s 1 normal none;
-  -ms-animation: bounce 700ms ease-in-out 3600s 1 normal none;
 }
 #header .bg .bg-handle:before {
   position: absolute;
@@ -197,9 +194,6 @@ strong {
   -moz-animation: bounce 700ms ease-in-out 0;
   -o-animation: bounce 700ms ease-in-out 0;
   animation: bounce 700ms ease-in-out 0;
-  -webkit-animation: bounce 700ms ease-in-out 0 1 normal none;
-  -moz-animation: bounce 700ms ease-in-out 0 1 normal none;
-  -ms-animation: bounce 700ms ease-in-out 0 1 normal none;
 }
 #main {
   position: relative;
@@ -235,9 +229,6 @@ strong {
   -moz-animation: wave 1200s linear 0 infinite;
   -o-animation: wave 1200s linear 0 infinite;
   animation: wave 1200s linear 0 infinite;
-  -webkit-animation: wave 1200s linear 0 infinite normal none;
-  -moz-animation: wave 1200s linear 0 infinite normal none;
-  -ms-animation: wave 1200s linear 0 infinite normal none;
 }
 #footer:after {
   height: 30px;
@@ -246,9 +237,6 @@ strong {
   -moz-animation: wave 1200s linear 0 infinite reverse;
   -o-animation: wave 1200s linear 0 infinite reverse;
   animation: wave 1200s linear 0 infinite reverse;
-  -webkit-animation: wave 1200s linear 0 infinite reverse none;
-  -moz-animation: wave 1200s linear 0 infinite reverse none;
-  -ms-animation: wave 1200s linear 0 infinite reverse none;
 }
 #footer h3 {
   margin-top: 0;

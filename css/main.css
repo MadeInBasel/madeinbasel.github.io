@@ -163,7 +163,7 @@ strong {
 #header .bg {
   position: relative;
   height: 65%;
-  margin-top: 2%;
+  margin-top: 30px;
 }
 #header .bg .bg-handle {
   position: absolute;

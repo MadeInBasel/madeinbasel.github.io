@@ -37,7 +37,7 @@ body {
   height: 100%;
 }
 body {
-  background-color: #e6e6e6;
+  background-color: #eeeeee;
   font-family: 'Open Sans', sans-serif;
   font-size: .9em;
   color: #404041;
@@ -50,7 +50,18 @@ body {
 }
 .sheet {
   margin: 0 auto;
-  max-width: 900px;
+  max-width: 990px;
+  padding: 0 12px;
+}
+@media (min-width: 450px) {
+  .sheet {
+    padding: 0 20px;
+  }
+}
+@media (min-width: 700px) {
+  .sheet {
+    padding: 0 40px;
+  }
 }
 a {
   text-decoration: none;
@@ -69,15 +80,9 @@ p {
 p:last-child {
   margin: 0;
 }
-h1,
-h2,
-h3,
-h4,
-h5 {
-  font-weight: 600;
-}
 h2 {
   font-family: 'Pacifico', cursive;
+  font-weight: normal;
 }
 ul {
   margin-bottom: 15px;
@@ -196,10 +201,20 @@ strong {
   -moz-animation: bounce 700ms ease-in-out 0 1 normal none;
   -ms-animation: bounce 700ms ease-in-out 0 1 normal none;
 }
+#main {
+  position: relative;
+  z-index: 1;
+  box-shadow: 0 12px 12px rgba(0, 0, 0, 0.1);
+  background: #f5f5f5;
+  margin-top: -30px;
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
 #footer {
   position: relative;
-  margin-top: 100px;
-  padding: 12px 12px 20px;
+  z-index: 1;
+  padding-top: 12px;
+  padding-bottom: 20px;
   background-color: #0099cc;
   color: #ffffff;
 }
@@ -268,7 +283,7 @@ strong {
   background-image: url(/img/logo-github.svg);
 }
 article {
-  padding: 15px 12px;
+  padding: 15px 0;
   margin-bottom: 25px;
 }
 article p {

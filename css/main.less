@@ -6,7 +6,8 @@
 @orange: #F1861E;
 
 @colorFg: #404041;
-@colorBg: #E6E6E6;
+@colorBgBody: #eeeeee;
+@colorBg: whitesmoke;
 @colorFgAlternative: #fff;
 @colorBgAlternative: #0099CC;
 @colorFgShy: lighten(@colorFg, 20);
@@ -21,7 +22,7 @@
 @fontSizeTiny: .6rem;
 @fontSizeLarge: 1.2rem;
 
-@siteWidth: 900px;
+@siteWidth: 990px;
 @breakpointSmall: 450px;
 @breakpointMedium: 700px;
 
@@ -145,7 +146,7 @@ html, body {
 }
 
 body {
-	background-color: @colorBg;
+	background-color: @colorBgBody;
 	font-family: @fontDefault;
 	font-size: .9em;
 	color: @colorFg;
@@ -159,6 +160,14 @@ body {
 .sheet {
 	margin: 0 auto;
 	max-width: @siteWidth;
+	padding: 0 12px;
+
+	@media (min-width: @breakpointSmall) {
+		padding: 0 20px;
+	}
+	@media (min-width: @breakpointMedium) {
+		padding: 0 40px;
+	}
 }
 
 a {
@@ -179,12 +188,9 @@ p {
 	}
 }
 
-h1, h2, h3, h4, h5 {
-	font-weight: 600;
-}
-
 h2 {
 	font-family: @fontSpecial;
+	font-weight: normal;
 }
 
 ul {
@@ -276,10 +282,21 @@ strong {
 	}
 }
 
+#main {
+	position: relative;
+	z-index: 1;
+	box-shadow: 0 12px 12px rgba(0, 0, 0, 0.1);
+	background: @colorBg;
+	margin-top: -30px;
+	padding-top: 25px;
+	padding-bottom: 25px;
+}
+
 #footer {
 	position: relative;
-	margin-top: 100px;
-	padding: 12px 12px 20px;
+	z-index: 1;
+	padding-top: 12px;
+	padding-bottom: 20px;
 	background-color: @colorBgAlternative;
 	color: @colorFgAlternative;
 
@@ -345,7 +362,7 @@ strong {
 }
 
 article {
-	padding: 15px 12px;
+	padding: 15px 0;
 	margin-bottom: 25px;
 
 	p {

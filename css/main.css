@@ -139,7 +139,7 @@ strong {
   z-index: 1;
   text-align: center;
 }
-@media (min-width: 700px) {
+@media (min-width: 700px) and (min-height: 750px) {
   #header {
     height: 80%;
   }
@@ -159,6 +159,7 @@ strong {
 #header .logo-wrapper .catchphrase {
   display: block;
   font-style: italic;
+  text-shadow: 1px 1px #f5f5f5;
 }
 @media (min-width: 700px) {
   #header .logo-wrapper .catchphrase {
@@ -175,7 +176,7 @@ strong {
   display: block;
   width: 32px;
   height: 32px;
-  bottom: 5%;
+  bottom: 15px;
   left: 50%;
   margin-left: -16px;
   -webkit-transition: 200ms;
@@ -199,6 +200,11 @@ strong {
   -moz-animation: bounce 700ms ease-in-out 0;
   -o-animation: bounce 700ms ease-in-out 0;
   animation: bounce 700ms ease-in-out 0;
+}
+@media (min-width: 700px) and (min-height: 750px) {
+  #header .bg .bg-handle {
+    display: none;
+  }
 }
 #main {
   position: relative;

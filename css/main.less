@@ -168,7 +168,7 @@ strong {
 #header {
 	height: 100%;
 
-	@media(min-width: @breakpointMedium) {
+	@media(min-width: @breakpointMedium) and (min-height: 750px) {
 		height: 80%;
 	}
 	position: relative;
@@ -191,6 +191,7 @@ strong {
 		.catchphrase {
 			display: block;
 			font-style: italic;
+			text-shadow: 1px 1px @colorBg;
 
 			@media (min-width: @breakpointMedium) {
 				font-size: 1.5rem;
@@ -208,7 +209,7 @@ strong {
 			display: block;
 			width: 32px;
 			height: 32px;
-			bottom: 5%;
+			bottom: 15px;
 			left: 50%;
 			margin-left: -16px;
 			.transition(200ms);
@@ -224,6 +225,10 @@ strong {
 
 			&:hover {
 				.animation(bounce, 700ms, ease-in-out, 0);
+			}
+
+			@media(min-width: @breakpointMedium) and (min-height: 750px) {
+				display: none;
 			}
 		}
 	}

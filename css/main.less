@@ -274,6 +274,7 @@ strong {
 	padding-bottom: 20px;
 	background-color: @colorBgAlternative;
 	color: @colorFgAlternative;
+	text-align: center;
 
 	&:before, &:after {
 		position: absolute;
@@ -302,36 +303,52 @@ strong {
 	}
 
 	a {
-		display: block;
 		color: @colorFgAlternative;
 	}
 
 	.copyright {
 		opacity: .8;
+
+		@media (min-width: @breakpointMedium) {
+			margin-left: 12px;
+			display: inline;
+		}
+
 	}
 
-	.social {
-		display: block;
-		float: right;
+	.social-link {
+		display: inline-block;
 		width: 48px;
 		height: 48px;
 		margin: 8px;
+		background-repeat: no-repeat;
+		background-size: contain;
+		background-color: @colorFgAlternative;
+
+		&:hover {
+			background-color: #FF65C2;
+			background-color: @colorFg;
+		}
 
 		@media (min-width: @breakpointMedium) {
 			width: 64px;
 			height: 64px;
 		}
 
-		background-repeat: no-repeat;
-		background-size: contain;
-		background-color: @colorFgAlternative;
-
 		&.twitter {
 			background-image: url(/img/logo-twitter.svg);
+
+			&:hover {
+				background-color: #00acee;
+			}
 		}
 
 		&.github {
 			background-image: url(/img/logo-github.svg);
+
+			&:hover {
+				background-color: @colorFg;
+			}
 		}
 	}
 }

@@ -139,9 +139,19 @@ strong {
   z-index: 1;
   text-align: center;
 }
-@media (min-width: 700px) and (min-height: 750px) {
+@media (min-aspect-ratio: 1/1) {
   #header {
     height: 80%;
+  }
+}
+@media (min-aspect-ratio: 12/8) {
+  #header {
+    height: 90%;
+  }
+}
+@media (min-aspect-ratio: 12/6) {
+  #header {
+    height: 100%;
   }
 }
 #header .logo-wrapper {
@@ -166,10 +176,23 @@ strong {
     font-size: 1.5rem;
   }
 }
+@media (min-aspect-ratio: 12/7) {
+  #header .logo-wrapper .logo {
+    width: 220px;
+  }
+  #header .logo-wrapper .catchphrase {
+    display: none;
+  }
+}
 #header .bg {
   position: relative;
   height: 100%;
-  margin-top: 30px;
+  margin-top: 20px;
+}
+@media (min-aspect-ratio: 1/1) {
+  #header .bg {
+    margin: 0;
+  }
 }
 #header .bg .bg-handle {
   position: absolute;
@@ -201,7 +224,7 @@ strong {
   -o-animation: bounce 700ms ease-in-out 0;
   animation: bounce 700ms ease-in-out 0;
 }
-@media (min-width: 700px) and (min-height: 750px) {
+@media (min-aspect-ratio: 1/1) {
   #header .bg .bg-handle {
     display: none;
   }

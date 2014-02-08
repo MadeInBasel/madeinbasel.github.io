@@ -168,9 +168,18 @@ strong {
 #header {
 	height: 100%;
 
-	@media(min-width: @breakpointMedium) and (min-height: 750px) {
+	@media (min-aspect-ratio: 1/1) {
 		height: 80%;
 	}
+
+	@media (min-aspect-ratio: 12/8) {
+		height: 90%;
+	}
+
+	@media (min-aspect-ratio: 12/6) {
+		height: 100%;
+	}
+
 	position: relative;
 	z-index: 1;
 	text-align: center;
@@ -197,12 +206,26 @@ strong {
 				font-size: 1.5rem;
 			}
 		}
+
+		@media (min-aspect-ratio: 12/7) {
+			.logo {
+				width: 220px;
+			}
+
+			.catchphrase {
+				display: none;
+			}
+		}
 	}
 
 	.bg {
 		position: relative;
 		height: 100%;
-		margin-top: 30px;
+		margin-top: 20px;
+
+		@media (min-aspect-ratio: 1/1) {
+			margin: 0;
+		}
 
 		.bg-handle {
 			position: absolute;
@@ -227,7 +250,7 @@ strong {
 				.animation(bounce, 700ms, ease-in-out, 0);
 			}
 
-			@media(min-width: @breakpointMedium) and (min-height: 750px) {
+			@media (min-aspect-ratio: 1/1) {
 				display: none;
 			}
 		}
@@ -389,7 +412,7 @@ article {
 			.filter(grayscale(1));
 		}
 
-		&:hover img{
+		&:hover img {
 			.filter(grayscale(0));
 		}
 	}

@@ -193,6 +193,7 @@ strong {
 		.logo {
 			display: inline-block;
 			width: 340px;
+			max-width: 100%;
 			height: 100%;
 			background: url(/img/logo.svg) no-repeat center;
 		}
@@ -409,11 +410,6 @@ article {
 		img {
 			max-width: 200px;
 			height: auto;
-			.filter(grayscale(1));
-		}
-
-		&:hover img {
-			.filter(grayscale(0));
 		}
 	}
 }

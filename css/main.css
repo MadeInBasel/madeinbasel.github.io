@@ -83,6 +83,7 @@ p:last-child {
 h2 {
   font-family: 'Pacifico', cursive;
   font-weight: normal;
+  text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.5);
 }
 ul {
   margin-bottom: 15px;
@@ -96,7 +97,7 @@ ul li {
   display: inline-block;
   padding: 8px 15px;
   border: 0;
-  background-color: #0099cc;
+  background-color: #008fa9;
   border-radius: 0;
   color: #ffffff;
   text-transform: uppercase;
@@ -109,7 +110,7 @@ ul li {
 }
 .button:hover {
   text-decoration: none;
-  background-color: #00ace6;
+  background-color: #00a5c3;
 }
 .button:active {
   -webkit-transform: scale(0.98, 0.98);
@@ -117,10 +118,10 @@ ul li {
   -o-transform: scale(0.98, 0.98);
   -ms-transform: scale(0.98, 0.98);
   transform: scale(0.98, 0.98);
-  background-color: #0086b3;
-  -webkit-box-shadow: inset 0 2px 0 2px #007aa3;
-  -moz-box-shadow: inset 0 2px 0 2px #007aa3;
-  box-shadow: inset 0 2px 0 2px #007aa3;
+  background-color: #007990;
+  -webkit-box-shadow: inset 0 2px 0 2px #006c80;
+  -moz-box-shadow: inset 0 2px 0 2px #006c80;
+  box-shadow: inset 0 2px 0 2px #006c80;
   outline: none;
 }
 img {
@@ -138,16 +139,21 @@ strong {
   position: relative;
   z-index: 1;
   text-align: center;
-  margin-bottom: 30px;
+}
+@media (min-width: 700px) {
+  #header {
+    height: 80%;
+  }
 }
 #header .logo-wrapper {
-  position: relative;
-  height: 35%;
+  position: absolute;
+  height: 40%;
+  width: 100%;
   z-index: 1;
 }
 #header .logo-wrapper .logo {
   display: inline-block;
-  width: 300px;
+  width: 340px;
   height: 100%;
   background: url(/img/logo.svg) no-repeat center;
 }
@@ -162,7 +168,7 @@ strong {
 }
 #header .bg {
   position: relative;
-  height: 65%;
+  height: 100%;
   margin-top: 30px;
 }
 #header .bg .bg-handle {
@@ -197,7 +203,6 @@ strong {
 }
 #main {
   position: relative;
-  z-index: 1;
   box-shadow: 0 12px 12px rgba(0, 0, 0, 0.1);
   background: #f5f5f5;
   margin-top: -30px;
@@ -209,7 +214,7 @@ strong {
   z-index: 1;
   padding-top: 12px;
   padding-bottom: 20px;
-  background-color: #0099cc;
+  background-color: #008fa9;
   color: #ffffff;
 }
 #footer:before,
@@ -364,6 +369,16 @@ article p {
 .partner-list .list-item-link img {
   max-width: 200px;
   height: auto;
+  -webkit-filter: grayscale(1);
+  -moz-filter: grayscale(1);
+  -ms-filter: grayscale(1);
+  filter: grayscale(1);
+}
+.partner-list .list-item-link:hover img {
+  -webkit-filter: grayscale(0);
+  -moz-filter: grayscale(0);
+  -ms-filter: grayscale(0);
+  filter: grayscale(0);
 }
 .meetup-list {
   list-style: none;

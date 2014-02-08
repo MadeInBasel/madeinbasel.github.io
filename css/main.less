@@ -1,15 +1,13 @@
 @import (less) "lesshat.less";
 
-@blue: #0099CC;
-@green: #009245;
-@red: #D41440;
-@orange: #F1861E;
+@blue: #008FA9;
 
 @colorFg: #404041;
 @colorBgBody: #eeeeee;
 @colorBg: whitesmoke;
 @colorFgAlternative: #fff;
 @colorBgAlternative: #0099CC;
+@colorBgAlternative: #008FA9;
 @colorFgShy: lighten(@colorFg, 20);
 @colorFgBorder: #b9b9b9;
 
@@ -136,6 +134,7 @@ p {
 h2 {
 	font-family: @fontSpecial;
 	font-weight: normal;
+	text-shadow: 1px 1px 1px hsla(0, 0%, 100%, .5);
 }
 
 ul {
@@ -149,7 +148,7 @@ ul {
 
 .button {
 	-webkit-appearance: none;
-	.button(@blue);
+	.button(@colorBgAlternative);
 	cursor: pointer;
 	font-size: @fontSizeLarge;
 }
@@ -169,19 +168,23 @@ strong {
 
 #header {
 	height: 100%;
+
+	@media(min-width: @breakpointMedium) {
+		height: 80%;
+	}
 	position: relative;
 	z-index: 1;
 	text-align: center;
-	margin-bottom: 30px;
 
 	.logo-wrapper {
-		position: relative;
-		height: 35%;
+		position: absolute;
+		height: 40%;
+		width: 100%;
 		z-index: 1;
 
 		.logo {
 			display: inline-block;
-			width: 300px;
+			width: 340px;
 			height: 100%;
 			background: url(/img/logo.svg) no-repeat center;
 		}
@@ -198,7 +201,7 @@ strong {
 
 	.bg {
 		position: relative;
-		height: 65%;
+		height: 100%;
 		margin-top: 30px;
 
 		.bg-handle {
@@ -229,7 +232,6 @@ strong {
 
 #main {
 	position: relative;
-	z-index: 1;
 	box-shadow: 0 12px 12px rgba(0, 0, 0, 0.1);
 	background: @colorBg;
 	margin-top: -30px;
@@ -380,6 +382,11 @@ article {
 		img {
 			max-width: 200px;
 			height: auto;
+			.filter(grayscale(1));
+		}
+
+		&:hover img{
+			.filter(grayscale(0));
 		}
 	}
 }

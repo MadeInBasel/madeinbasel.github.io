@@ -137,6 +137,15 @@ h2 {
 	text-shadow: 1px 1px 1px hsla(0, 0%, 100%, .5);
 }
 
+article {
+	padding: 15px 0;
+	margin-bottom: 25px;
+
+	p {
+		text-align: justify;
+	}
+}
+
 ul {
 	margin-bottom: 15px;
 	padding-left: 25px;
@@ -144,12 +153,6 @@ ul {
 	li {
 		margin-bottom: 5px;
 	}
-}
-
-.button {
-	-webkit-appearance: none;
-	.button(@colorBgAlternative);
-	cursor: pointer;
 }
 
 img {
@@ -161,8 +164,41 @@ strong {
 	font-weight: bold;
 }
 
+.button {
+	-webkit-appearance: none;
+	.button(@colorBgAlternative);
+	cursor: pointer;
+}
+
 .centered {
 	text-align: center;
+}
+
+.divider-vertical {
+	display: block;
+	font-weight: bold;
+	margin: 12px 0;
+
+	&:before {
+		content: '-- ';
+	}
+
+	&:after{
+		content: ' --';
+	}
+}
+
+.divider-horizontal {
+	font-weight: bold;
+	margin: 0 5px;
+
+	&:before {
+		content: '< ';
+	}
+
+	&:after{
+		content: ' >';
+	}
 }
 
 #header {
@@ -361,15 +397,6 @@ strong {
 	}
 }
 
-article {
-	padding: 15px 0;
-	margin-bottom: 25px;
-
-	p {
-		text-align: justify;
-	}
-}
-
 .badge-link, .list-item-link {
 	display: block;
 	width: 100%; // FF bug?
@@ -401,7 +428,6 @@ article {
 
 	.badge-link {
 		@media (min-width: @breakpointMedium) {
-			margin-bottom: 10px;
 			padding: 4px;
 			border: 3px dashed transparent;
 
@@ -413,10 +439,6 @@ article {
 		&:hover {
 			border-color: hsla(0, 0%, 10%, .2);
 		}
-	}
-
-	.divider {
-		font-weight: bold;
 	}
 }
 
@@ -444,7 +466,7 @@ article {
 	padding: 0;
 
 	.list-item {
-		margin-bottom: 5px;
+		margin-bottom: 7px;
 		padding: 12px;
 		background-color: hsla(0, 0%, 10%, .08);
 		background-color: white;

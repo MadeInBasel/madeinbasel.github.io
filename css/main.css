@@ -85,12 +85,26 @@ h2 {
   font-weight: normal;
   text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.5);
 }
+article {
+  padding: 15px 0;
+  margin-bottom: 25px;
+}
+article p {
+  text-align: justify;
+}
 ul {
   margin-bottom: 15px;
   padding-left: 25px;
 }
 ul li {
   margin-bottom: 5px;
+}
+img {
+  display: block;
+  max-width: 100%;
+}
+strong {
+  font-weight: bold;
 }
 .button {
   -webkit-appearance: none;
@@ -123,15 +137,29 @@ ul li {
   box-shadow: inset 0 2px 0 2px #006c80;
   outline: none;
 }
-img {
-  display: block;
-  max-width: 100%;
-}
-strong {
-  font-weight: bold;
-}
 .centered {
   text-align: center;
+}
+.divider-vertical {
+  display: block;
+  font-weight: bold;
+  margin: 12px 0;
+}
+.divider-vertical:before {
+  content: '-- ';
+}
+.divider-vertical:after {
+  content: ' --';
+}
+.divider-horizontal {
+  font-weight: bold;
+  margin: 0 5px;
+}
+.divider-horizontal:before {
+  content: '< ';
+}
+.divider-horizontal:after {
+  content: ' >';
 }
 #header {
   height: 100%;
@@ -325,13 +353,6 @@ strong {
 #footer .social-link.github:hover {
   background-color: #404041;
 }
-article {
-  padding: 15px 0;
-  margin-bottom: 25px;
-}
-article p {
-  text-align: justify;
-}
 .badge-link,
 .list-item-link {
   display: block;
@@ -391,7 +412,6 @@ article p {
 }
 @media (min-width: 700px) {
   .badge .badge-link {
-    margin-bottom: 10px;
     padding: 4px;
     border: 3px dashed transparent;
   }
@@ -401,9 +421,6 @@ article p {
 }
 .badge .badge-link:hover {
   border-color: rgba(26, 26, 26, 0.2);
-}
-.badge .divider {
-  font-weight: bold;
 }
 .partner-list {
   list-style: none;
@@ -425,7 +442,7 @@ article p {
   padding: 0;
 }
 .meetup-list .list-item {
-  margin-bottom: 5px;
+  margin-bottom: 7px;
   padding: 12px;
   background-color: rgba(26, 26, 26, 0.08);
   background-color: white;

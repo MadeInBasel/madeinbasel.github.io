@@ -315,8 +315,6 @@ strong {
 			bottom: 15px;
 			left: 50%;
 			margin-left: -16px;
-			.transition(200ms);
-			.animation(bounce, 700ms, ease-in-out, 3600s);
 
 			&:before {
 				position: absolute;
@@ -324,10 +322,6 @@ strong {
 				content: "";
 				border: 16px solid transparent;
 				border-top-color: @colorFgAlternative;
-			}
-
-			&:hover {
-				.animation(bounce, 700ms, ease-in-out, 0);
 			}
 
 			@media (min-aspect-ratio: 1/1) {
@@ -533,4 +527,3 @@ strong {
 
 // Animations
 .keyframes(~'wave, 0%{ background-position: 0 bottom; } 25%{ background-position: 10000px bottom; } 75%{ background-position: -10000px bottom; } 100%{ background-position: 0 bottom; }');
-.keyframes(~'bounce, 0%{ transform: translate(0, 0); } 50%{ transform: translate(0, 50%); } 100%{ transform: translate(0, 0); }');

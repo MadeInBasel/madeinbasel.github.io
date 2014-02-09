@@ -1,0 +1,536 @@
+@import (less) "lesshat.less";
+
+@blue: #008FA9;
+@error: #ff3922;
+
+@colorFg: #404041;
+@colorBgBody: #eeeeee;
+@colorBg: whitesmoke;
+@colorFgAlternative: #fff;
+@colorBgAlternative: #008FA9;
+@colorFgShy: lighten(@colorFg, 20);
+@colorFgBorder: #c3c3c3;
+
+@fontDefault: 'Open Sans', sans-serif;
+@fontSpecial: 'Pacifico', cursive;
+
+@fontSize: 1em;
+@fontSizeSmall: .8rem;
+@fontSizeTiny: .6rem;
+@fontSizeLarge: 1.2rem;
+
+@siteWidth: 990px;
+@breakpointSmall: 450px;
+@breakpointMedium: 700px;
+
+@link: rgb(44, 135, 173);
+
+.clearfix {
+	*zoom: 1;
+	display: block;
+	&:before,
+	&:after {
+		display: table;
+		content: "";
+	}
+	&:after {
+		clear: both;
+	}
+}
+
+.nowrap {
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	max-width: 100%;
+}
+
+.quote {
+	font-style: italic;
+
+	&:before {
+		content: "«";
+	}
+	&:after {
+		content: "»";
+	}
+}
+
+.button(@color) {
+	display: inline-block;
+	padding: 8px 15px;
+	border: 0;
+	background-color: @color;
+	border-radius: 0;
+	color: @colorFgAlternative;
+	text-transform: uppercase;
+	.transition(200ms);
+
+	&:hover {
+		text-decoration: none;
+		background-color: lighten(@color, 5);
+	}
+
+	&:active {
+		.transform(scale(0.98, .98));
+		background-color: darken(@color, 5);
+		.box-shadow(inset 0 2px 0 2px darken(@color, 8));
+		outline: none;
+	}
+}
+
+*, *:before, *:after {
+	.box-sizing(border-box);
+}
+
+html, body {
+	height: 100%;
+}
+
+body {
+	background-color: @colorBgBody;
+	font-family: @fontDefault;
+	font-size: .9em;
+	color: @colorFg;
+	line-height: 1.5;
+
+	@media (min-width: @breakpointSmall) {
+		font-size: @fontSize;
+	}
+}
+
+.sheet {
+	margin: 0 auto;
+	max-width: @siteWidth;
+}
+
+a {
+	text-decoration: none;
+	color: @link;
+	.transition(150ms ease-in);
+
+	&:hover {
+		text-decoration: underline;
+	}
+}
+
+p {
+	margin: 0 0 15px;
+
+	&:last-child {
+		margin: 0;
+	}
+}
+
+h2 {
+	font-family: @fontSpecial;
+	font-weight: normal;
+	text-shadow: 1px 1px 1px hsla(0, 0%, 100%, .5);
+}
+
+article {
+	padding: 15px 12px 35px;
+
+	@media (min-width: @breakpointSmall) {
+		padding: 15px 20px 35px;
+	}
+	@media (min-width: @breakpointMedium) {
+		padding: 15px 40px 35px;
+	}
+
+	&:not(:last-of-type) {
+		border-bottom: 1px dashed @colorFgBorder;
+	}
+
+	&:nth-child(even) {
+		background-color: lighten(@colorBg, 2);
+	}
+
+	p {
+		text-align: justify;
+
+		@media(min-width: @breakpointMedium) {
+			text-align: left;
+		}
+	}
+}
+
+ul {
+	margin-bottom: 15px;
+	padding-left: 25px;
+
+	li {
+		margin-bottom: 5px;
+	}
+}
+
+img {
+	display: block;
+	max-width: 100%;
+}
+
+strong {
+	font-weight: bold;
+}
+
+.button {
+	-webkit-appearance: none;
+	.button(@colorBgAlternative);
+	cursor: pointer;
+}
+
+.centered {
+	text-align: center;
+}
+
+.divider-vertical {
+	display: block;
+	font-weight: bold;
+	margin: 12px 0;
+
+	&:before {
+		content: '-- ';
+	}
+
+	&:after{
+		content: ' --';
+	}
+}
+
+.divider-horizontal {
+	font-weight: bold;
+	margin: 0 5px;
+
+	&:before {
+		content: '< ';
+	}
+
+	&:after{
+		content: ' >';
+	}
+}
+
+.upgrade-info {
+	display: none;
+	padding: 12px;
+	text-align: center;
+	background: @error;
+	color: @colorFgAlternative;
+
+	p {
+		margin: 0;
+	}
+
+	a {
+		color: @colorFgAlternative;
+		font-weight: bold;
+	}
+
+	html.no-svg & {
+		// FF27 reports no-flexbox, thus removed here :/
+		display: block;
+	}
+}
+
+#header {
+	height: 100%;
+
+	@media (min-aspect-ratio: 1/1) {
+		height: 80%;
+	}
+
+	@media (min-aspect-ratio: 12/8) {
+		height: 90%;
+	}
+
+	@media (min-aspect-ratio: 12/7) {
+		height: 100%;
+	}
+
+	position: relative;
+	z-index: 1;
+	text-align: center;
+
+	.logo-wrapper {
+		position: absolute;
+		height: 40%;
+		width: 100%;
+		z-index: 1;
+
+		.logo {
+			display: inline-block;
+			width: 340px;
+			max-width: 100%;
+			height: 100%;
+			background: url(/img/logo.svg) no-repeat center;
+
+			html.no-svg & {
+				background: url(/img/logo.png) no-repeat center;
+			}
+		}
+
+		.slogan {
+			display: block;
+			font-style: italic;
+			text-shadow: 1px 1px @colorBg;
+
+			&:before {
+				content: '<!-- ';
+			}
+
+			&:after {
+				content: ' -->';
+			}
+
+			@media (min-width: @breakpointMedium) {
+				font-size: 1.3rem;
+			}
+		}
+
+		@media (min-aspect-ratio: 12/6) {
+			.slogan {
+				display: none;
+			}
+
+			.logo {
+				width: 220px;
+			}
+		}
+	}
+
+	.bg {
+		position: relative;
+		height: 100%;
+		margin-top: 20px;
+
+		@media (min-aspect-ratio: 1/1) {
+			margin: 0;
+		}
+
+		.bg-handle {
+			position: absolute;
+			display: block;
+			width: 32px;
+			height: 32px;
+			bottom: 15px;
+			left: 50%;
+			margin-left: -16px;
+			.transition(200ms);
+			.animation(bounce, 700ms, ease-in-out, 3600s);
+
+			&:before {
+				position: absolute;
+				left: 0;
+				content: "";
+				border: 16px solid transparent;
+				border-top-color: @colorFgAlternative;
+			}
+
+			&:hover {
+				.animation(bounce, 700ms, ease-in-out, 0);
+			}
+
+			@media (min-aspect-ratio: 1/1) {
+				display: none;
+			}
+		}
+	}
+}
+
+#main {
+	position: relative;
+	box-shadow: 0 12px 12px rgba(0, 0, 0, 0.1);
+	background-color: @colorBg;
+	margin-top: -30px;
+	padding-top: 50px;
+	padding-bottom: 25px;
+}
+
+#footer {
+	position: relative;
+	z-index: 1;
+	padding-top: 12px;
+	padding-bottom: 20px;
+	background-color: @colorBgAlternative;
+	color: @colorFgAlternative;
+	text-align: center;
+
+	&:before, &:after {
+		position: absolute;
+		content: "";
+		width: 100%;
+		bottom: 100%;
+		left: 0;
+		background-repeat: repeat-x;
+		background-position: 0 bottom;
+	}
+
+	&:before {
+		height: 40px;
+		background-image: url(/img/footer-bg-before.svg);
+		.animation(wave, 1200s, linear, 0, infinite);
+	}
+
+	&:after {
+		height: 30px;
+		background-image: url(/img/footer-bg.svg);
+		.animation(wave, 1200s, linear, 0, infinite, reverse);
+	}
+
+	h3 {
+		margin-top: 0;
+	}
+
+	a {
+		color: @colorFgAlternative;
+	}
+
+	.copyright {
+		opacity: .8;
+
+		@media (min-width: @breakpointMedium) {
+			margin-left: 12px;
+			display: inline;
+		}
+
+	}
+
+	.social-link {
+		display: inline-block;
+		width: 48px;
+		height: 48px;
+		margin: 8px;
+		background-repeat: no-repeat;
+		background-size: contain;
+		background-color: @colorFgAlternative;
+
+		&:hover {
+			background-color: #FF65C2;
+			background-color: @colorFg;
+		}
+
+		@media (min-width: @breakpointMedium) {
+			width: 64px;
+			height: 64px;
+		}
+
+		&.twitter {
+			background-image: url(/img/logo-twitter.svg);
+
+			&:hover {
+				background-color: #00acee;
+			}
+		}
+
+		&.github {
+			background-image: url(/img/logo-github.svg);
+
+			&:hover {
+				background-color: @colorFg;
+			}
+		}
+	}
+}
+
+.badge {
+	.columns {
+		.display(flex);
+		.flex-direction(row);
+		.flex-wrap(wrap);
+		.justify-content(space-between);
+
+		.column3 {
+			width: 32%;
+			.display(flex);
+
+			&:first-child {
+				.flex-direction(column);
+				.flex-wrap(wrap);
+				.justify-content(space-between);
+			}
+		}
+	}
+
+	.badge-link {
+		display: block;
+		width: 100%; // FF bug?
+		background-color: hsla(0, 0%, 10%, .08);
+
+		@media (min-width: @breakpointMedium) {
+			padding: 4px;
+			border: 3px dashed transparent;
+
+			&.small {
+				padding: 1px 4px;
+			}
+		}
+
+		&:hover {
+			border-color: hsla(0, 0%, 10%, .2);
+			background-color: hsla(0, 0%, 10%, .05);
+		}
+	}
+}
+
+.partner-list {
+	@maxHeight: 100px;
+	list-style: none;
+	padding: 0;
+
+	.list-item {
+		display: block;
+		float: left;
+		margin: 0;
+	}
+
+	.list-item-link {
+		display: block;
+		height: @maxHeight;
+		margin: 3px;
+		border: 1px solid hsla(0, 0%, 0%, .07);
+		background-color: lighten(@colorBg, 3);
+
+		&:hover {
+			background-color: hsla(0, 0%, 10%, .05);
+		}
+
+		img {
+			display: block;
+			max-width: 100%;
+			max-height: 100%;
+			padding: 3px;
+		}
+
+		&.empty {
+			width: @maxHeight;
+			line-height: @maxHeight;
+			border-style: dashed;
+			text-align: center;
+			font-weight: bold;
+			font-size: 1.2rem;
+			text-decoration: none;
+			border-color: hsla(0, 0%, 0%, .2);
+			color: @colorFgShy;
+		}
+	}
+}
+
+.meetup-list {
+	list-style: none;
+	padding: 0;
+
+	.list-item {
+		margin-bottom: 7px;
+		padding: 12px;
+		background-color: darken(@colorBg, 1);
+		border-left: 1px solid @colorFgBorder;
+	}
+
+	h4 {
+		margin: 0;
+	}
+}
+
+// Animations
+.keyframes(~'wave, 0%{ background-position: 0 bottom; } 25%{ background-position: 10000px bottom; } 75%{ background-position: -10000px bottom; } 100%{ background-position: 0 bottom; }');
+.keyframes(~'bounce, 0%{ transform: translate(0, 0); } 50%{ transform: translate(0, 50%); } 100%{ transform: translate(0, 0); }');

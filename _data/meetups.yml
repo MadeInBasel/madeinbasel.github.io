@@ -1,0 +1,15 @@
+- name: Webilea
+  link: http://www.meetup.com/webilea/
+  description: The event series Webilea powered by i-net offers a platform for web developers, users, IT entrepreneurs, researchers and other web pioneers in the area of Northwestern Switzerland to exchange experiences and find synergies.
+
+- name: Basel.js
+  link: http://www.meetup.com/basel-js/
+  description: Its heating up. Browsers are getting mature with very good support for javascript. Application logic is moving into the browsers. Where is this all going? Shall we geek-out?
+
+- name: Coding Sessions Basel
+  link: http://www.meetup.com/Coding-Sessions-Basel/
+  description: This group is targeted at people that enjoy programming and anyone that would like to learn it.
+
+- name: $foobar
+  link: http://www.meetup.com/foobar/
+  description: Monthly Drinkup for Web Developers in Basel.

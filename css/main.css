@@ -173,10 +173,10 @@ strong {
   text-shadow: 1px 1px #f5f5f5;
 }
 #header .logo-wrapper .slogan:before {
-  content: '< ';
+  content: '<!-- ';
 }
 #header .logo-wrapper .slogan:after {
-  content: ' >';
+  content: ' -->';
 }
 @media (min-width: 700px) {
   #header .logo-wrapper .slogan {

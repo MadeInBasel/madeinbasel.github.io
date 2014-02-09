@@ -116,7 +116,7 @@ body {
 a {
 	text-decoration: none;
 	color: @link;
-	.transition(200ms);
+	.transition(150ms ease-in);
 
 	&:hover {
 		text-decoration: underline;
@@ -397,16 +397,6 @@ strong {
 	}
 }
 
-.badge-link, .list-item-link {
-	display: block;
-	width: 100%; // FF bug?
-	background-color: hsla(0, 0%, 10%, .08);
-
-	&:hover {
-		background-color: hsla(0, 0%, 10%, .05);
-	}
-}
-
 .badge {
 	.columns {
 		.display(flex);
@@ -427,6 +417,10 @@ strong {
 	}
 
 	.badge-link {
+		display: block;
+		width: 100%; // FF bug?
+		background-color: hsla(0, 0%, 10%, .08);
+
 		@media (min-width: @breakpointMedium) {
 			padding: 4px;
 			border: 3px dashed transparent;
@@ -438,25 +432,50 @@ strong {
 
 		&:hover {
 			border-color: hsla(0, 0%, 10%, .2);
+			background-color: hsla(0, 0%, 10%, .05);
 		}
 	}
 }
 
 .partner-list {
+	@maxHeight: 100px;
 	list-style: none;
 	padding: 0;
 
 	.list-item {
 		display: block;
 		float: left;
+		margin: 0;
 	}
 
 	.list-item-link {
-		padding: 4px;
+		display: block;
+		height: @maxHeight;
+		margin: 3px;
+		border: 1px solid hsla(0, 0%, 0%, .07);
+		background: white;
+
+		&:hover {
+			background-color: hsla(0, 0%, 10%, .05);
+		}
 
 		img {
-			max-width: 200px;
-			height: auto;
+			display: block;
+			max-width: 100%;
+			max-height: 100%;
+			padding: 3px;
+		}
+
+		&.empty {
+			width: @maxHeight;
+			line-height: @maxHeight;
+			border-style: dashed;
+			text-align: center;
+			font-weight: bold;
+			font-size: 1.2rem;
+			text-decoration: none;
+			border-color: hsla(0, 0%, 0%, .2);
+			color: @colorFgShy;
 		}
 	}
 }

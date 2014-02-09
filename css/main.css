@@ -66,10 +66,10 @@ body {
 a {
   text-decoration: none;
   color: #2c87ad;
-  -webkit-transition: 200ms;
-  -moz-transition: 200ms;
-  -o-transition: 200ms;
-  transition: 200ms;
+  -webkit-transition: 150ms ease-in;
+  -moz-transition: 150ms ease-in;
+  -o-transition: 150ms ease-in;
+  transition: 150ms ease-in;
 }
 a:hover {
   text-decoration: underline;
@@ -353,16 +353,6 @@ strong {
 #footer .social-link.github:hover {
   background-color: #404041;
 }
-.badge-link,
-.list-item-link {
-  display: block;
-  width: 100%;
-  background-color: rgba(26, 26, 26, 0.08);
-}
-.badge-link:hover,
-.list-item-link:hover {
-  background-color: rgba(26, 26, 26, 0.05);
-}
 .badge .columns {
   display: -webkit-box;
   display: -moz-box;
@@ -410,6 +400,11 @@ strong {
   -ms-flex-pack: space-between;
   justify-content: space-between;
 }
+.badge .badge-link {
+  display: block;
+  width: 100%;
+  background-color: rgba(26, 26, 26, 0.08);
+}
 @media (min-width: 700px) {
   .badge .badge-link {
     padding: 4px;
@@ -421,6 +416,7 @@ strong {
 }
 .badge .badge-link:hover {
   border-color: rgba(26, 26, 26, 0.2);
+  background-color: rgba(26, 26, 26, 0.05);
 }
 .partner-list {
   list-style: none;
@@ -429,13 +425,34 @@ strong {
 .partner-list .list-item {
   display: block;
   float: left;
+  margin: 0;
 }
 .partner-list .list-item-link {
-  padding: 4px;
+  display: block;
+  height: 100px;
+  margin: 3px;
+  border: 1px solid rgba(0, 0, 0, 0.07);
+  background: white;
+}
+.partner-list .list-item-link:hover {
+  background-color: rgba(26, 26, 26, 0.05);
 }
 .partner-list .list-item-link img {
-  max-width: 200px;
-  height: auto;
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+  padding: 3px;
+}
+.partner-list .list-item-link.empty {
+  width: 100px;
+  line-height: 100px;
+  border-style: dashed;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.2rem;
+  text-decoration: none;
+  border-color: rgba(0, 0, 0, 0.2);
+  color: #737374;
 }
 .meetup-list {
   list-style: none;

@@ -266,14 +266,6 @@ html.no-svg #header .logo-wrapper .logo {
   bottom: 15px;
   left: 50%;
   margin-left: -16px;
-  -webkit-transition: 200ms;
-  -moz-transition: 200ms;
-  -o-transition: 200ms;
-  transition: 200ms;
-  -webkit-animation: bounce 700ms ease-in-out 3600s;
-  -moz-animation: bounce 700ms ease-in-out 3600s;
-  -o-animation: bounce 700ms ease-in-out 3600s;
-  animation: bounce 700ms ease-in-out 3600s;
 }
 #header .bg .bg-handle:before {
   position: absolute;
@@ -281,12 +273,6 @@ html.no-svg #header .logo-wrapper .logo {
   content: "";
   border: 16px solid transparent;
   border-top-color: #ffffff;
-}
-#header .bg .bg-handle:hover {
-  -webkit-animation: bounce 700ms ease-in-out 0;
-  -moz-animation: bounce 700ms ease-in-out 0;
-  -o-animation: bounce 700ms ease-in-out 0;
-  animation: bounce 700ms ease-in-out 0;
 }
 @media (min-aspect-ratio: 1/1) {
   #header .bg .bg-handle {
@@ -502,11 +488,4 @@ lesshat-selector {
 @-moz-keyframes wave{ 0%{ background-position: 0 bottom; } 25%{ background-position: 10000px bottom; } 75%{ background-position: -10000px bottom; } 100%{ background-position: 0 bottom; }}
 @-o-keyframes wave{ 0%{ background-position: 0 bottom; } 25%{ background-position: 10000px bottom; } 75%{ background-position: -10000px bottom; } 100%{ background-position: 0 bottom; }}
 @keyframes wave{ 0%{ background-position: 0 bottom; } 25%{ background-position: 10000px bottom; } 75%{ background-position: -10000px bottom; } 100%{ background-position: 0 bottom; };
-}
-lesshat-selector {
-  -lh-property: 0; } 
-@-webkit-keyframes bounce{ 0%{ -webkit-transform: translate(0, 0); } 50%{ -webkit-transform: translate(0, 50%); } 100%{ -webkit-transform: translate(0, 0); }}
-@-moz-keyframes bounce{ 0%{ -moz-transform: translate(0, 0); } 50%{ -moz-transform: translate(0, 50%); } 100%{ -moz-transform: translate(0, 0); }}
-@-o-keyframes bounce{ 0%{ -o-transform: translate(0, 0); } 50%{ -o-transform: translate(0, 50%); } 100%{ -o-transform: translate(0, 0); }}
-@keyframes bounce{ 0%{-webkit-transform: translate(0, 0);-moz-transform: translate(0, 0);-ms-transform: translate(0, 0);transform: translate(0, 0); } 50%{-webkit-transform: translate(0, 50%);-moz-transform: translate(0, 50%);-ms-transform: translate(0, 50%);transform: translate(0, 50%); } 100%{-webkit-transform: translate(0, 0);-moz-transform: translate(0, 0);-ms-transform: translate(0, 0);transform: translate(0, 0); };
 }

@@ -170,6 +170,24 @@ strong {
 .divider-horizontal:after {
   content: ' >';
 }
+.upgrade-info {
+  display: none;
+  padding: 12px;
+  text-align: center;
+  background: #ff3922;
+  color: #ffffff;
+}
+.upgrade-info p {
+  margin: 0;
+}
+.upgrade-info a {
+  color: #ffffff;
+  font-weight: bold;
+}
+html.no-svg .upgrade-info,
+html.no-flexbox .upgrade-info {
+  display: block;
+}
 #header {
   height: 100%;
   position: relative;

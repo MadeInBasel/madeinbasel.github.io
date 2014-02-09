@@ -1,12 +1,12 @@
 @import (less) "lesshat.less";
 
 @blue: #008FA9;
+@error: #ff3922;
 
 @colorFg: #404041;
 @colorBgBody: #eeeeee;
 @colorBg: whitesmoke;
 @colorFgAlternative: #fff;
-@colorBgAlternative: #0099CC;
 @colorBgAlternative: #008FA9;
 @colorFgShy: lighten(@colorFg, 20);
 @colorFgBorder: #c3c3c3;
@@ -207,6 +207,27 @@ strong {
 
 	&:after{
 		content: ' >';
+	}
+}
+
+.upgrade-info {
+	display: none;
+	padding: 12px;
+	text-align: center;
+	background: @error;
+	color: @colorFgAlternative;
+
+	p {
+		margin: 0;
+	}
+
+	a {
+		color: @colorFgAlternative;
+		font-weight: bold;
+	}
+
+	html.no-svg &, html.no-flexbox & {
+		display: block;
 	}
 }
 

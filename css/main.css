@@ -177,12 +177,14 @@ strong {
     font-size: 1.5rem;
   }
 }
+@media (min-aspect-ratio: 12/8) {
+  #header .logo-wrapper .catchphrase {
+    display: none;
+  }
+}
 @media (min-aspect-ratio: 12/7) {
   #header .logo-wrapper .logo {
     width: 220px;
-  }
-  #header .logo-wrapper .catchphrase {
-    display: none;
   }
 }
 #header .bg {

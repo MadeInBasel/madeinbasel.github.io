@@ -204,6 +204,9 @@ strong {
   height: 100%;
   background: url(/img/logo.svg) no-repeat center;
 }
+html.no-svg #header .logo-wrapper .logo {
+  background: url(/img/logo.png) no-repeat center;
+}
 #header .logo-wrapper .slogan {
   display: block;
   font-style: italic;

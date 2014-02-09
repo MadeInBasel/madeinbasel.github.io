@@ -9,7 +9,7 @@
 @colorBgAlternative: #0099CC;
 @colorBgAlternative: #008FA9;
 @colorFgShy: lighten(@colorFg, 20);
-@colorFgBorder: #b9b9b9;
+@colorFgBorder: #c3c3c3;
 
 @fontDefault: 'Open Sans', sans-serif;
 @fontSpecial: 'Pacifico', cursive;
@@ -24,7 +24,6 @@
 @breakpointMedium: 700px;
 
 @link: rgb(44, 135, 173);
-@bgOverlay: rgba(60, 60, 60, .09);
 
 .clearfix {
 	*zoom: 1;
@@ -103,14 +102,6 @@ body {
 .sheet {
 	margin: 0 auto;
 	max-width: @siteWidth;
-	padding: 0 12px;
-
-	@media (min-width: @breakpointSmall) {
-		padding: 0 20px;
-	}
-	@media (min-width: @breakpointMedium) {
-		padding: 0 40px;
-	}
 }
 
 a {
@@ -138,8 +129,22 @@ h2 {
 }
 
 article {
-	padding: 15px 0;
-	margin-bottom: 25px;
+	padding: 15px 12px 35px;
+
+	@media (min-width: @breakpointSmall) {
+		padding: 15px 20px 35px;
+	}
+	@media (min-width: @breakpointMedium) {
+		padding: 15px 40px 35px;
+	}
+
+	&:not(:last-of-type) {
+		border-bottom: 1px dashed @colorFgBorder;
+	}
+
+	&:nth-child(even) {
+		background-color: lighten(@colorBg, 2);
+	}
 
 	p {
 		text-align: justify;
@@ -309,7 +314,7 @@ strong {
 #main {
 	position: relative;
 	box-shadow: 0 12px 12px rgba(0, 0, 0, 0.1);
-	background: @colorBg;
+	background-color: @colorBg;
 	margin-top: -30px;
 	padding-top: 50px;
 	padding-bottom: 25px;
@@ -457,7 +462,7 @@ strong {
 		height: @maxHeight;
 		margin: 3px;
 		border: 1px solid hsla(0, 0%, 0%, .07);
-		background: white;
+		background-color: lighten(@colorBg, 3);
 
 		&:hover {
 			background-color: hsla(0, 0%, 10%, .05);
@@ -491,8 +496,8 @@ strong {
 	.list-item {
 		margin-bottom: 7px;
 		padding: 12px;
-		background-color: hsla(0, 0%, 10%, .08);
-		background-color: white;
+		background-color: darken(@colorBg, 1);
+		border-left: 1px solid @colorFgBorder;
 	}
 
 	h4 {

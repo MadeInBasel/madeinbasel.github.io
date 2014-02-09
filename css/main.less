@@ -176,7 +176,7 @@ strong {
 		height: 90%;
 	}
 
-	@media (min-aspect-ratio: 12/6) {
+	@media (min-aspect-ratio: 12/7) {
 		height: 100%;
 	}
 
@@ -198,23 +198,29 @@ strong {
 			background: url(/img/logo.svg) no-repeat center;
 		}
 
-		.catchphrase {
+		.slogan {
 			display: block;
 			font-style: italic;
 			text-shadow: 1px 1px @colorBg;
 
+			&:before {
+				content: '<';
+			}
+
+			&:after {
+				content: '>';
+			}
+
 			@media (min-width: @breakpointMedium) {
-				font-size: 1.5rem;
+				font-size: 1.3rem;
 			}
 		}
 
-		@media (min-aspect-ratio: 12/8) {
-			.catchphrase {
+		@media (min-aspect-ratio: 12/6) {
+			.slogan {
 				display: none;
 			}
-		}
 
-		@media (min-aspect-ratio: 12/7) {
 			.logo {
 				width: 220px;
 			}

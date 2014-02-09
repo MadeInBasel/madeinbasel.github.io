@@ -149,7 +149,7 @@ strong {
     height: 90%;
   }
 }
-@media (min-aspect-ratio: 12/6) {
+@media (min-aspect-ratio: 12/7) {
   #header {
     height: 100%;
   }
@@ -167,22 +167,26 @@ strong {
   height: 100%;
   background: url(/img/logo.svg) no-repeat center;
 }
-#header .logo-wrapper .catchphrase {
+#header .logo-wrapper .slogan {
   display: block;
   font-style: italic;
   text-shadow: 1px 1px #f5f5f5;
 }
+#header .logo-wrapper .slogan:before {
+  content: '<';
+}
+#header .logo-wrapper .slogan:after {
+  content: '>';
+}
 @media (min-width: 700px) {
-  #header .logo-wrapper .catchphrase {
-    font-size: 1.5rem;
+  #header .logo-wrapper .slogan {
+    font-size: 1.3rem;
   }
 }
-@media (min-aspect-ratio: 12/8) {
-  #header .logo-wrapper .catchphrase {
+@media (min-aspect-ratio: 12/6) {
+  #header .logo-wrapper .slogan {
     display: none;
   }
-}
-@media (min-aspect-ratio: 12/7) {
   #header .logo-wrapper .logo {
     width: 220px;
   }

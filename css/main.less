@@ -226,7 +226,8 @@ strong {
 		font-weight: bold;
 	}
 
-	html.no-svg &, html.no-flexbox & {
+	html.no-svg & {
+		// FF27 reports no-flexbox, thus removed here :/
 		display: block;
 	}
 }

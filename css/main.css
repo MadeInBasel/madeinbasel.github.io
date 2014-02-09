@@ -184,8 +184,7 @@ strong {
   color: #ffffff;
   font-weight: bold;
 }
-html.no-svg .upgrade-info,
-html.no-flexbox .upgrade-info {
+html.no-svg .upgrade-info {
   display: block;
 }
 #header {

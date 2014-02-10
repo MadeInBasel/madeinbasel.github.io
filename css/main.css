@@ -456,7 +456,7 @@ html.no-svg #header .logo-wrapper .logo {
   display: block;
   max-width: 100%;
   max-height: 100%;
-  padding: 3px;
+  padding: 10px;
 }
 .partner-list .list-item-link.empty {
   width: 100px;

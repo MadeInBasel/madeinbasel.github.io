@@ -1,3 +1,7 @@
 - name: Cargo Media AG
   link: http://cargomedia.ch
   imgSrc: cargomedia.png
+
+- name: Erlio GmbH
+  link: http://erl.io/
+  imgSrc: erlio.png

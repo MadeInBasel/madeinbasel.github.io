@@ -34,7 +34,7 @@ title: Home
 <article>
 	<h2>Who is in</h2>
 	<ul class="partner-list clearfix">
-		{% for item in site.data.partner %}
+		{% for item in site.data.partner reversed %}
 		<li class="list-item">
 			<a class="list-item-link" href="{{ item.link }}">
 				<img src="/img/partner/{{ item.imgSrc }}" alt="{{ item.name }}" />

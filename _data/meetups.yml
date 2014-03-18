@@ -13,3 +13,8 @@
 - name: $foobar
   link: http://www.meetup.com/foobar/
   description: Monthly Drinkup for Web Developers in Basel.
+  
+- name: Startup Hub
+  link: http://www.meetup.com/startup_hub/
+  description: Quarterly GetTogether targeting anybody interested in knowledge exchange with different startups.
+

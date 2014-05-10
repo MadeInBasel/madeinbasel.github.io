@@ -345,5 +345,10 @@
 			<a href="mailto:hello@madeinbasel.org" class="mail">hello@madeinbasel.org</a>
 			<p class="copyright">&copy; {{ site.time | date: '%Y' }} madeinbasel.org</p>
 		</footer>
+		<script>
+			var url ='img/icons.svg';
+			var c=new XMLHttpRequest(); c.open('GET', url, false); c.setRequestHeader('Content-Type', 'text/xml'); c.send();
+			document.body.insertBefore(c.responseXML.firstChild, document.body.firstChild)
+		</script>
 	</body>
 </html>

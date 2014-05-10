@@ -74,6 +74,16 @@ h2 {
   font-weight: normal;
   text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.5);
 }
+h2:hover .icon-link {
+  display: inline-block;
+}
+h2 .icon-link {
+  display: none;
+  width: 20px;
+  height: 20px;
+  margin-left: 5px;
+  fill: #008fa9;
+}
 article {
   padding: 15px 12px 35px;
 }

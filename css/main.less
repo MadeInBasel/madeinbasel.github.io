@@ -126,6 +126,20 @@ h2 {
 	font-family: @fontSpecial;
 	font-weight: normal;
 	text-shadow: 1px 1px 1px hsla(0, 0%, 100%, .5);
+
+	&:hover {
+		.icon-link {
+			display: inline-block;
+		}
+	}
+
+	.icon-link {
+		display: none;
+		width: 20px;
+		height: 20px;
+		margin-left: 5px;
+		fill: @blue;
+	}
 }
 
 article {

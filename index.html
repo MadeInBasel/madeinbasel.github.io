@@ -3,25 +3,40 @@ layout: default
 title: Home
 ---
 
-<article>
-	<h2>What is this about</h2>
+<article id="intro">
+	<h2><span>What is this about</span>
+		<a href="#intro" class="icon-link">
+			<svg viewBox="0 0 32 32">
+				<g filter="">
+					<use xlink:href="#link"></use>
+				</g>
+			</svg>
+		</a>
+	</h2>
 	<p>Basel is the home of some amazing (web-)applications, developed by even more amazing people. With the <em>Made in Basel</em> badge, we want to underline this fact. By having a common label, we help sustain a creative climate which encourages entrepreneurship and innovation, and creates employment opportunities for a diverse local workforce.</p>
 	<p>If you are a Basel-based* entrepreneur, developer, designer, artist or otherwise involved in software or web-development, make a statement and grab your badge today. Place it on your website, in your project or app. It's yours!</p>
 </article>
 
-<article class="badge">
-	<h2>Choose your badge</h2>
-		<div class="columns">
-			<div class="column3">
-				<a class="badge-link small" href="/img/logo/PNG/MadeInBasel-landscape.png" download="MadeInBasel-landscape.png"><img src="/img/logo/SVG/MadeInBasel-landscape.svg" alt="Made in Basel" /></a>
-				<a class="badge-link small" href="/img/logo/PNG/MadeInBasel-textOnly.png" download="MadeInBasel-text.png"><img src="/img/logo/SVG/MadeInBasel-text.svg" alt="Made in Basel" /></a>
-			</div>
-			<div class="column3">
-				<a class="badge-link" href="/img/logo/PNG/MadeInBasel-badge.png" download="MadeInBasel-badge.png"><img src="/img/logo/SVG/MadeInBasel-badge.svg" alt="Made in Basel" /></a>
-			</div>
-			<div class="column3">
-				<a class="badge-link" href="/img/logo/PNG/MadeInBasel-portrait.png" download="MadeInBasel-portrait.png"><img src="/img/logo/SVG/MadeInBasel-portrait.svg" alt="Made in Basel" /></a>
-			</div>
+<article class="badge" id="badge">
+	<h2><span>Choose your badge</span>
+		<a href="#badge" class="icon-link">
+			<svg viewBox="0 0 32 32">
+				<g filter="">
+					<use xlink:href="#link"></use>
+				</g>
+			</svg>
+		</a>
+	</h2>
+	<div class="columns">
+		<div class="column3">
+			<a class="badge-link small" href="/img/logo/PNG/MadeInBasel-landscape.png" download="MadeInBasel-landscape.png"><img src="/img/logo/SVG/MadeInBasel-landscape.svg" alt="Made in Basel" /></a>
+			<a class="badge-link small" href="/img/logo/PNG/MadeInBasel-textOnly.png" download="MadeInBasel-text.png"><img src="/img/logo/SVG/MadeInBasel-text.svg" alt="Made in Basel" /></a>
+		</div>
+		<div class="column3">
+			<a class="badge-link" href="/img/logo/PNG/MadeInBasel-badge.png" download="MadeInBasel-badge.png"><img src="/img/logo/SVG/MadeInBasel-badge.svg" alt="Made in Basel" /></a>
+		</div>
+		<div class="column3">
+			<a class="badge-link" href="/img/logo/PNG/MadeInBasel-portrait.png" download="MadeInBasel-portrait.png"><img src="/img/logo/SVG/MadeInBasel-portrait.svg" alt="Made in Basel" /></a>
 		</div>
 	</div>
 	<div class="centered">
@@ -31,8 +46,16 @@ title: Home
 	</div>
 </article>
 
-<article>
-	<h2>Who is in</h2>
+<article id="partner">
+	<h2><span>Who is in</span>
+		<a href="#partner" class="icon-link">
+			<svg viewBox="0 0 32 32">
+				<g filter="">
+					<use xlink:href="#link"></use>
+				</g>
+			</svg>
+		</a>
+	</h2>
 	<ul class="partner-list clearfix">
 		{% for item in site.data.partner reversed %}
 		<li class="list-item">
@@ -55,8 +78,16 @@ title: Home
 	</div>
 </article>
 
-<article>
-	<h2>Meetups / Events</h2>
+<article id="meetups">
+	<h2><span>Meetups / Events</span>
+		<a href="#meetups" class="icon-link">
+			<svg viewBox="0 0 32 32">
+				<g filter="">
+					<use xlink:href="#link"></use>
+				</g>
+			</svg>
+		</a>
+	</h2>
 	<p>If you're looking for an opportunity to meet some great people in person, here is a list of tech- and web-development Meetups taking place in Basel:</p>
 	<ul class="meetup-list">
 		{% for meetup in site.data.meetups%}
@@ -70,8 +101,16 @@ title: Home
 	</ul>
 </article>
 
-<article>
-	<h2>About</h2>
+<article id="about">
+	<h2><span>About</span>
+		<a href="#about" class="icon-link">
+			<svg viewBox="0 0 32 32">
+				<g filter="">
+					<use xlink:href="#link"></use>
+				</g>
+			</svg>
+		</a>
+	</h2>
 	<p>The label <em>Made in Basel</em> is intended to support the local developer community and to promote Basel as a place to live, work and develop software. This project is non-profit and open-source. However, the designs, including the badge, are protected under copyright law. Please do not use them in an inappropriate way or to make money.</p>
 	<p>*<small>Over 50% of the front- & backend code for the website or application has been written in Basel.</small></p>
 </article>

@@ -13,3 +13,7 @@
 - name: Bachapp
   link: http://www.bachapp.ch/
   imgSrc: bachapp.png
+
+- name: Thoma AG
+  link: http://www.thoma-ag.ch/
+  imgSrc: thoma.png

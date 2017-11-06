@@ -1,7 +1,7 @@
 Made in Basel
 =====================
 
-__WORK IN PROGRESS__
+__DEPRECATED__
 
 http://www.madeinbasel.org - a [Jekyll](http://jekyllrb.com/) powered website, hosted with Github pages.
 
